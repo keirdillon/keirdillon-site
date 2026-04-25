@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/keirdillon/.agents/skills/**)",
+      "Read(//Users/keirdillon/**)",
+      "Bash(node *)"
+    ]
+  }
+}
