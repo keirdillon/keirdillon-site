@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-THTL2M1JL2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-THTL2M1JL2");
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Keir Dillon — Category Disruption Through Brand</title>
+  <meta name="description" content="Keir Dillon sees where industries compete on the same terms and builds brands that compete on different ones. From snowboarding to headphones to beer to financial services.">
+  <meta name="theme-color" content="#FAF8F0">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22%238C6840%22/></svg>">
-  <meta name="description" content="Keir Dillon sees where industries compete on the same terms and builds brands that compete on different ones. From snowboarding to headphones to beer to financial services.">  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <noscript>
+    <style>
+      .fade-in { opacity: 1 !important; transform: none !important; }
+      @media (max-width: 900px) {
+        .nav-links { display: flex !important; flex-wrap: wrap; gap: 14px; position: static !important; padding: 0 !important; border: 0 !important; background: transparent !important; }
+        .nav-toggle { display: none !important; }
+      }
+    </style>
+  </noscript>
 
   <link rel="canonical" href="https://keirdillon.com">
   <meta property="og:title" content="Keir Dillon — Category Disruption Through Brand">
@@ -50,12 +54,22 @@
     },
     "award": ["3x World Superpipe Champion", "2x ESPN X Games Medalist"]
   }</script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-THTL2M1JL2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-THTL2M1JL2");
+  </script>
 </head>
 <body>
 
-  <div class="walnut-bar"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="walnut-bar" aria-hidden="true"></div>
 
-  <nav>
+  <nav aria-label="Primary">
     <div class="nav-inner">
       <a href="/" class="nav-mark">Keir <span>Dillon</span></a>
       <ul class="nav-links" id="navLinks">
@@ -64,11 +78,13 @@
         <li><a href="/thinking">Thinking</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
     </div>
   </nav>
+
+  <main id="main">
 
   <!-- HERO -->
   <section class="hero">
@@ -82,9 +98,9 @@
     <div class="hero-cta">
       <a href="/story" class="btn-primary">
         Read the Story
-        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="https://dillonagency.co" class="btn-secondary" target="_blank">See Dillon Agency</a>
+      <a href="https://dillonagency.co" class="btn-secondary" target="_blank" rel="noopener noreferrer">See Dillon Agency</a>
     </div>
   </section>
 
@@ -153,7 +169,7 @@
 
   <!-- WHAT I DO NOW -->
   <section class="section fade-in">
-    <div style="margin-bottom:48px;"><img src="/assets/images/keir-headshot.jpg" alt="Keir Dillon" style="width:240px;border-radius:2px;"></div>
+    <div style="margin-bottom:48px;"><img src="/assets/images/keir-headshot.jpg" alt="Keir Dillon, portrait" width="800" height="778" loading="lazy" decoding="async" style="width:240px;height:auto;border-radius:2px;"></div>
     <div class="section-label">What I Do Now</div>
     <div class="section-title">Growth leadership inside <em>traditional industries.</em></div>
     <div class="two-col" style="margin-top:48px">
@@ -167,7 +183,7 @@
       </div>
     </div>
     <div style="margin-top:40px">
-      <a href="https://dillonagency.co" class="btn-secondary" target="_blank" style="font-size:0.8rem;">See how Dillon Agency works with firms</a>
+      <a href="https://dillonagency.co" class="btn-secondary" target="_blank" rel="noopener noreferrer" style="font-size:0.8rem;">See how Dillon Agency works with firms</a>
     </div>
   </section>
 
@@ -208,18 +224,20 @@
       <div class="cta-text">The medium changes.<br>The strategy <em>does not.</em></div>
       <a href="/contact" class="btn-cta">
         Get in Touch
-        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
   </section>
+
+  </main>
 
   <footer>
     <div class="footer-inner">
       <div class="footer-copy">&copy; 2026 Keir Dillon. All rights reserved.</div>
       <div class="footer-links">
-        <a href="https://linkedin.com/in/keirdillon" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://instagram.com/keirdillon" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://dillonagency.co" target="_blank" rel="noopener">Dillon Agency</a>
+        <a href="https://linkedin.com/in/keirdillon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://instagram.com/keirdillon" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://dillonagency.co" target="_blank" rel="noopener noreferrer">Dillon Agency</a>
       </div>
     </div>
   </footer>
