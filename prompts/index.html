@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Prompt Library — Keir Dillon</title>
+<meta name="description" content="Free prompts for financial advisors. Two depths each — The Sketch for fast, The Blueprint for sharp. New set every Wednesday.">
+<meta property="og:title" content="The Prompt Library — Keir Dillon">
+<meta property="og:description" content="Free prompts for financial advisors. New set every Wednesday.">
+<meta property="og:url" content="https://keirdillon.com/prompts">
+<link rel="canonical" href="https://keirdillon.com/prompts">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #FAF8F4;
+    --cream: #F5F0E8;
+    --cream-deep: #EDE5D8;
+    --near-black: #1E1D1A;
+    --warm-gray: #6B665C;
+    --mid-gray: #9B9688;
+    --walnut: #A07850;
+    --walnut-dark: #7A5C3E;
+    --border: #EDEBE5;
+    --border-dark: #D9D3C5;
+    --text-body: #3A3832;
+    --display: 'Instrument Serif', Georgia, serif;
+    --body: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--near-black);
+    font-family: var(--body);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+  ::selection { background: var(--walnut); color: var(--bg); }
+
+  .topbar { background: var(--near-black); color: var(--bg); padding: 14px 0; border-bottom: 1px solid var(--walnut-dark); }
+  .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; font-weight: 400; }
+  .topbar a { color: rgba(250, 248, 244, 0.78); text-decoration: none; transition: color 0.2s; }
+  .topbar a:hover { color: var(--bg); }
+  .topbar-brand { color: var(--bg); }
+  .topbar-links { display: flex; gap: 32px; }
+
+  .hero { padding: 120px 32px 80px; border-bottom: 1px solid var(--border-dark); background: var(--bg); }
+  .hero-inner { max-width: 1100px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 24px; font-weight: 400; }
+  .breadcrumb a { color: var(--walnut); text-decoration: none; }
+  .hero h1 { font-family: var(--display); font-style: italic; font-weight: 400; font-size: clamp(64px, 9vw, 128px); line-height: 0.97; letter-spacing: -0.02em; color: var(--near-black); margin-bottom: 36px; max-width: 1000px; }
+  .hero-rule { width: 88px; height: 1px; background: var(--walnut); margin-bottom: 32px; }
+  .hero-sub { font-size: 22px; line-height: 1.55; color: var(--text-body); max-width: 720px; }
+
+  .system { padding: 80px 32px; background: var(--cream); border-bottom: 1px solid var(--border-dark); }
+  .system-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .system-label { font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--walnut); margin-bottom: 16px; font-weight: 500; }
+  .system h2 { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 48px; line-height: 1.05; color: var(--near-black); margin-bottom: 24px; }
+  .system p { font-size: 17px; line-height: 1.7; color: var(--text-body); margin-bottom: 16px; max-width: 560px; }
+  .system-cards { display: flex; flex-direction: column; gap: 16px; }
+  .system-card { background: var(--bg); border: 1px solid var(--border-dark); padding: 24px 28px; }
+  .system-card-tag { font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--walnut); margin-bottom: 10px; font-weight: 500; padding-bottom: 8px; border-bottom: 1px solid var(--walnut); display: inline-block; }
+  .system-card h3 { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 28px; color: var(--near-black); margin-bottom: 10px; }
+  .system-card p { font-size: 14px; line-height: 1.6; color: var(--text-body); margin-bottom: 0; }
+
+  .sets { padding: 100px 32px; background: var(--bg); }
+  .sets-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--walnut); margin-bottom: 20px; font-weight: 500; }
+  .sets h2 { font-family: var(--display); font-style: italic; font-weight: 400; font-size: clamp(40px, 5.5vw, 64px); line-height: 1; color: var(--near-black); margin-bottom: 56px; letter-spacing: -0.02em; max-width: 800px; }
+
+  .set-card { background: var(--bg); border: 1px solid var(--border-dark); padding: 0; margin-bottom: 24px; transition: border-color 0.2s, transform 0.2s; }
+  .set-card-link { display: block; padding: 40px 44px; text-decoration: none; color: inherit; }
+  .set-card:hover { border-color: var(--walnut); }
+  .set-card-meta { display: flex; gap: 24px; align-items: baseline; margin-bottom: 16px; flex-wrap: wrap; }
+  .set-card-num { font-family: var(--display); font-style: italic; font-size: 24px; color: var(--walnut); font-weight: 400; }
+  .set-card-pillar { font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--mid-gray); font-weight: 400; }
+  .set-card-status { font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--walnut); font-weight: 500; padding: 4px 10px; border: 1px solid var(--walnut); }
+  .set-card-status.coming { color: var(--mid-gray); border-color: var(--border-dark); }
+  .set-card h3 { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 48px; line-height: 1; color: var(--near-black); margin-bottom: 16px; }
+  .set-card p { font-size: 16px; line-height: 1.65; color: var(--text-body); max-width: 720px; margin-bottom: 20px; }
+  .set-card-list { display: flex; gap: 24px; flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--border-dark); }
+  .set-card-list-item { font-size: 13px; color: var(--warm-gray); }
+  .set-card-list-item strong { color: var(--near-black); font-weight: 500; }
+  .set-card-arrow { font-family: var(--display); font-style: italic; font-size: 24px; color: var(--walnut); margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-dark); display: inline-block; }
+  .set-card.coming .set-card-link { cursor: default; }
+  .set-card.coming:hover { border-color: var(--border-dark); }
+  .set-card.coming h3, .set-card.coming p, .set-card.coming .set-card-num { color: var(--mid-gray); }
+
+  footer { background: var(--cream); padding: 48px 32px; border-top: 1px solid var(--border-dark); }
+  footer .inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--mid-gray); }
+  footer a { color: var(--walnut); text-decoration: none; }
+
+  @media (max-width: 760px) {
+    .topbar-inner { font-size: 10px; padding: 0 20px; }
+    .topbar-links { gap: 18px; }
+    .hero { padding: 70px 20px 50px; }
+    .hero h1 { font-size: 52px; }
+    .system { padding: 50px 20px; }
+    .system-inner { grid-template-columns: 1fr; gap: 32px; }
+    .system h2 { font-size: 36px; }
+    .sets { padding: 60px 20px; }
+    .set-card-link { padding: 28px; }
+    .set-card h3 { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a href="/" class="topbar-brand">Keir Dillon</a>
+    <div class="topbar-links">
+      <a href="/">Home</a>
+      <a href="/prompts">Prompts</a>
+      <a href="https://www.instagram.com/keirdillon" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a> &nbsp;·&nbsp; The Prompt Library</div>
+    <h1><em>Prompts<br>for advisors<br>who build.</em></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">A free, growing library of prompts for financial advisors using AI seriously. Two depths every set — The Sketch for a fast first try, The Blueprint for the real work. New set drops every Wednesday.</p>
+  </div>
+</section>
+
+<section class="system">
+  <div class="system-inner">
+    <div>
+      <div class="system-label">How the library works</div>
+      <h2><em>Two depths.<br>One topic.</em></h2>
+      <p>Every prompt in this library comes in two forms. Same topic, two different rigor levels. Pick the depth that matches the time you have and the use you want.</p>
+      <p>The system mirrors how I actually use AI day to day: a quick Sketch to test the idea, then a Blueprint when the answer matters enough to slow down and earn it.</p>
+    </div>
+    <div class="system-cards">
+      <div class="system-card">
+        <span class="system-card-tag">The Sketch</span>
+        <h3><em>Fast first try.</em></h3>
+        <p>Three lines of structure, the inputs you need, the rules that matter. A working answer in under 15 minutes.</p>
+      </div>
+      <div class="system-card">
+        <span class="system-card-tag">The Blueprint</span>
+        <h3><em>The real work.</em></h3>
+        <p>Multi-pass methodology, structured roles, output rigor, self-checks. Slower. Sharper. Worth it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sets">
+  <div class="sets-inner">
+    <div class="section-label">The library</div>
+    <h2><em>One set today.<br>A new one every Wednesday.</em></h2>
+
+    <article class="set-card">
+      <a href="/prompts/positioning" class="set-card-link">
+        <div class="set-card-meta">
+          <span class="set-card-num">Set 01</span>
+          <span class="set-card-pillar">Brand &amp; Voice</span>
+          <span class="set-card-status">Live</span>
+        </div>
+        <h3><em>Positioning.</em></h3>
+        <p>Three prompts for getting to a one-line statement that doesn't sound like every other advisor on LinkedIn. Find your differentiator. Define your real ICP. Make AI sound like you.</p>
+        <div class="set-card-list">
+          <div class="set-card-list-item"><strong>01</strong> · The Differentiator</div>
+          <div class="set-card-list-item"><strong>02</strong> · The ICP</div>
+          <div class="set-card-list-item"><strong>03</strong> · The Voice</div>
+        </div>
+        <span class="set-card-arrow"><em>Open the set →</em></span>
+      </a>
+    </article>
+
+    <article class="set-card coming">
+      <div class="set-card-link">
+        <div class="set-card-meta">
+          <span class="set-card-num">Set 02</span>
+          <span class="set-card-pillar">Time Back</span>
+          <span class="set-card-status coming">Wednesday</span>
+        </div>
+        <h3><em>Coming next Wednesday.</em></h3>
+        <p>The next set drops every Wednesday at 7am Pacific. Save the library, follow along.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <div>© 2026 Keir Dillon</div>
+    <div><a href="https://www.instagram.com/keirdillon" target="_blank" rel="noopener">@keirdillon</a> &nbsp;·&nbsp; <a href="/">keirdillon.com</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

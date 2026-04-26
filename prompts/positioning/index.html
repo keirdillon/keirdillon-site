@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Positioning Prompts — Keir Dillon</title>
+<meta name="description" content="Three prompts that fix advisor positioning. The Sketch for fast first try. The Blueprint for deep work. Free, both depths, ready to paste.">
+<meta property="og:title" content="Positioning Prompts — Keir Dillon">
+<meta property="og:description" content="Three prompts that fix advisor positioning. The Sketch and The Blueprint. Free, both depths.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://keirdillon.com/prompts/positioning">
+<link rel="canonical" href="https://keirdillon.com/prompts/positioning">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #FAF8F4;
+    --cream: #F5F0E8;
+    --cream-deep: #EDE5D8;
+    --near-black: #1E1D1A;
+    --warm-gray: #6B665C;
+    --mid-gray: #9B9688;
+    --walnut: #A07850;
+    --walnut-dark: #7A5C3E;
+    --border: #EDEBE5;
+    --border-dark: #D9D3C5;
+    --text-body: #3A3832;
+    --signal-green: #5A7A5C;
+    --display: 'Instrument Serif', Georgia, serif;
+    --body: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--near-black);
+    font-family: var(--body);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+
+  ::selection { background: var(--walnut); color: var(--bg); }
+
+  /* ============================================================ */
+  /* TOP NAV — minimal walnut bar */
+  /* ============================================================ */
+  .topbar {
+    background: var(--near-black);
+    color: var(--bg);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--walnut-dark);
+  }
+  .topbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .topbar a {
+    color: rgba(250, 248, 244, 0.78);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .topbar a:hover { color: var(--bg); }
+  .topbar-brand { color: var(--bg); }
+  .topbar-links { display: flex; gap: 32px; }
+
+  /* ============================================================ */
+  /* HERO */
+  /* ============================================================ */
+  .hero {
+    padding: 100px 32px 80px;
+    border-bottom: 1px solid var(--border-dark);
+    background: var(--bg);
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .breadcrumb {
+    font-size: 12px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+  .breadcrumb a {
+    color: var(--walnut);
+    text-decoration: none;
+  }
+  .breadcrumb a:hover { color: var(--walnut-dark); }
+  .hero h1 {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(56px, 8vw, 108px);
+    line-height: 0.97;
+    letter-spacing: -0.02em;
+    color: var(--near-black);
+    margin-bottom: 36px;
+    max-width: 920px;
+  }
+  .hero-rule {
+    width: 88px;
+    height: 1px;
+    background: var(--walnut);
+    margin-bottom: 32px;
+  }
+  .hero-sub {
+    font-size: 22px;
+    line-height: 1.55;
+    color: var(--text-body);
+    max-width: 680px;
+  }
+  .hero-meta {
+    margin-top: 48px;
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .hero-meta-item {
+    border-left: 1px solid var(--border-dark);
+    padding-left: 20px;
+  }
+  .hero-meta-label {
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--walnut);
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  .hero-meta-value {
+    font-family: var(--display);
+    font-size: 22px;
+    color: var(--near-black);
+    font-weight: 400;
+  }
+
+  /* ============================================================ */
+  /* INTRO — the dual-track explainer */
+  /* ============================================================ */
+  .intro {
+    padding: 80px 32px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--border-dark);
+  }
+  .intro-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  .intro-card {
+    background: var(--bg);
+    border: 1px solid var(--border-dark);
+    padding: 36px 40px;
+  }
+  .intro-card-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--walnut);
+    margin-bottom: 16px;
+    font-weight: 500;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--walnut);
+  }
+  .intro-card h2 {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1;
+    color: var(--near-black);
+    margin-bottom: 18px;
+  }
+  .intro-card p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text-body);
+  }
+  .intro-card-meta {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-dark);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--warm-gray);
+    letter-spacing: 0.04em;
+  }
+
+  /* ============================================================ */
+  /* PROMPT CARDS */
+  /* ============================================================ */
+  .prompts {
+    padding: 100px 32px 60px;
+    background: var(--bg);
+  }
+  .prompts-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-size: 12px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--walnut);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .prompts-h2 {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1;
+    color: var(--near-black);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+  }
+  .prompts-sub {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--warm-gray);
+    max-width: 640px;
+    margin-bottom: 64px;
+  }
+
+  .prompt-card {
+    border: 1px solid var(--border-dark);
+    background: var(--bg);
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+  .prompt-card-header {
+    padding: 36px 40px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--border-dark);
+    display: flex;
+    align-items: baseline;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .prompt-num {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--walnut);
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+  .prompt-title-block {
+    flex: 1;
+    min-width: 240px;
+  }
+  .prompt-title {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 44px;
+    line-height: 1;
+    color: var(--near-black);
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+  .prompt-deck {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--warm-gray);
+    max-width: 580px;
+  }
+
+  /* TAB SWITCHER */
+  .tab-bar {
+    display: flex;
+    border-bottom: 1px solid var(--border-dark);
+    background: var(--cream-deep);
+  }
+  .tab {
+    flex: 1;
+    padding: 18px 24px;
+    background: transparent;
+    border: none;
+    border-right: 1px solid var(--border-dark);
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--body);
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--warm-gray);
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+  }
+  .tab:last-child { border-right: none; }
+  .tab:hover { background: var(--cream); }
+  .tab.active {
+    background: var(--bg);
+    color: var(--near-black);
+  }
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    height: 2px;
+    background: var(--walnut);
+  }
+  .tab-name {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 24px;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 400;
+    color: var(--near-black);
+  }
+  .tab.active .tab-name { color: var(--near-black); }
+  .tab:not(.active) .tab-name { color: var(--warm-gray); }
+  .tab-meta {
+    font-size: 10px;
+    letter-spacing: 0.24em;
+  }
+
+  /* TAB BODY */
+  .tab-body { display: none; padding: 40px; }
+  .tab-body.active { display: block; }
+
+  .tab-body-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border-dark);
+  }
+  .tab-body-meta-item-label {
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--walnut);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .tab-body-meta-item-value {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-body);
+  }
+
+  /* PROMPT BLOCK */
+  .prompt-block-label {
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--walnut);
+    margin-bottom: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .copy-btn {
+    background: transparent;
+    border: 1px solid var(--border-dark);
+    color: var(--warm-gray);
+    padding: 7px 12px;
+    font-family: var(--body);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .copy-btn:hover {
+    color: var(--near-black);
+    border-color: var(--near-black);
+  }
+  .copy-btn.copied {
+    color: var(--signal-green);
+    border-color: var(--signal-green);
+  }
+  .prompt-block {
+    background: var(--cream);
+    border: 1px solid var(--border-dark);
+    padding: 28px 32px;
+    margin-bottom: 28px;
+  }
+  .prompt-block pre {
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--near-black);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* EXAMPLE OUTPUT — collapsed by default */
+  .example {
+    background: var(--cream-deep);
+    border: 1px solid var(--border-dark);
+    margin-top: 24px;
+  }
+  .example-toggle {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 18px 28px;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--walnut);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .example-arrow {
+    transition: transform 0.25s;
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 16px;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .example.open .example-arrow { transform: rotate(90deg); }
+  .example-body {
+    display: none;
+    padding: 0 28px 28px;
+  }
+  .example.open .example-body { display: block; }
+  .example-body-inner {
+    background: var(--bg);
+    border: 1px solid var(--border-dark);
+    padding: 24px 28px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-body);
+  }
+  .example-body-inner h4 {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--near-black);
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .example-body-inner h4:first-child { margin-top: 0; }
+  .example-body-inner ul, .example-body-inner ol {
+    padding-left: 22px;
+    margin-bottom: 12px;
+  }
+  .example-body-inner li { margin-bottom: 6px; }
+  .example-body-inner em {
+    color: var(--walnut);
+    font-style: italic;
+  }
+  .example-body-inner strong { color: var(--near-black); font-weight: 500; }
+
+  /* ============================================================ */
+  /* CTA SECTION */
+  /* ============================================================ */
+  .cta {
+    background: var(--near-black);
+    color: var(--bg);
+    padding: 120px 32px;
+  }
+  .cta-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .cta-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--walnut);
+    margin-bottom: 28px;
+    font-weight: 400;
+  }
+  .cta h2 {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 0.97;
+    color: var(--bg);
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+  }
+  .cta-rule {
+    width: 88px;
+    height: 1px;
+    background: var(--walnut);
+    margin-bottom: 36px;
+  }
+  .cta p {
+    font-size: 19px;
+    line-height: 1.6;
+    color: rgba(250, 248, 244, 0.78);
+    max-width: 620px;
+    margin-bottom: 28px;
+  }
+  .cta a.cta-link {
+    color: var(--bg);
+    text-decoration: none;
+    border-bottom: 1px solid var(--walnut);
+    padding-bottom: 2px;
+    transition: border-color 0.2s;
+  }
+  .cta a.cta-link:hover { border-color: var(--bg); }
+
+  /* ============================================================ */
+  /* FOOTER */
+  /* ============================================================ */
+  footer {
+    background: var(--cream);
+    padding: 48px 32px;
+    border-top: 1px solid var(--border-dark);
+  }
+  footer .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+  }
+  footer a { color: var(--walnut); text-decoration: none; }
+  footer a:hover { color: var(--walnut-dark); }
+
+  /* ============================================================ */
+  /* RESPONSIVE */
+  /* ============================================================ */
+  @media (max-width: 760px) {
+    .topbar-inner { font-size: 10px; padding: 0 20px; }
+    .topbar-links { gap: 18px; }
+    .hero { padding: 60px 20px 50px; }
+    .hero h1 { font-size: 44px; }
+    .hero-meta { gap: 24px; }
+    .intro { padding: 50px 20px; }
+    .intro-inner { grid-template-columns: 1fr; gap: 24px; }
+    .intro-card { padding: 28px; }
+    .intro-card h2 { font-size: 36px; }
+    .prompts { padding: 60px 20px 40px; }
+    .prompt-card-header { padding: 24px 24px; gap: 16px; }
+    .prompt-num { font-size: 40px; }
+    .prompt-title { font-size: 32px; }
+    .tab { padding: 14px 16px; }
+    .tab-name { font-size: 18px; }
+    .tab-meta { font-size: 9px; }
+    .tab-body { padding: 24px; }
+    .tab-body-meta { grid-template-columns: 1fr; gap: 16px; }
+    .prompt-block { padding: 18px 20px; }
+    .prompt-block pre { font-size: 11px; }
+    .cta { padding: 70px 20px; }
+    .cta h2 { font-size: 44px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- TOP NAV -->
+<!-- ============================================================ -->
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a href="/" class="topbar-brand">Keir Dillon</a>
+    <div class="topbar-links">
+      <a href="/">Home</a>
+      <a href="/prompts">Prompts</a>
+      <a href="https://www.instagram.com/keirdillon" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb"><a href="/prompts">The Prompt Library</a> &nbsp;·&nbsp; Set 01</div>
+    <h1><em>Fix advisor positioning.</em></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">Three prompts. Two depths each. The Sketch for a fast first try. The Blueprint for the real work. Free, both, ready to paste into Claude or ChatGPT.</p>
+
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Series</div>
+        <div class="hero-meta-value">Positioning</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Prompts</div>
+        <div class="hero-meta-value">3</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Time to use</div>
+        <div class="hero-meta-value">15–60 min</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Updated</div>
+        <div class="hero-meta-value">April 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- INTRO — Sketch vs Blueprint explainer -->
+<!-- ============================================================ -->
+<section class="intro">
+  <div class="intro-inner">
+    <div class="intro-card">
+      <span class="intro-card-tag">The Sketch</span>
+      <h2><em>Fast first try.</em></h2>
+      <p>The minimum viable version. Three lines of structure, the inputs you need, the rules that matter most. Get a working answer in under 15 minutes. Use this when you're testing the idea, you haven't done the prep work yet, or you just want to see what comes out.</p>
+      <div class="intro-card-meta">For: first run · 5 inputs · ~150 words</div>
+    </div>
+    <div class="intro-card">
+      <span class="intro-card-tag">The Blueprint</span>
+      <h2><em>The real work.</em></h2>
+      <p>Multi-pass methodology, structured roles, banned words, output rigor, self-checks. Use this when you have your inputs documented and you want a result good enough to put on your website. Slower. Sharper. Worth it.</p>
+      <div class="intro-card-meta">For: serious use · prepared inputs · ~600 words</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PROMPT CARDS -->
+<!-- ============================================================ -->
+<section class="prompts">
+  <div class="prompts-inner">
+    <div class="section-label">Set 01 · Positioning</div>
+    <h2 class="prompts-h2"><em>Three prompts.<br>Steal them.</em></h2>
+    <p class="prompts-sub">Run them in order. The Differentiator finds your one-line statement. The ICP makes it specific to who you actually serve. The Voice makes everything you write afterward sound like you.</p>
+
+    <!-- ============================================================ -->
+    <!-- PROMPT 01 — DIFFERENTIATOR -->
+    <!-- ============================================================ -->
+    <article class="prompt-card" id="differentiator">
+      <header class="prompt-card-header">
+        <div class="prompt-num">01</div>
+        <div class="prompt-title-block">
+          <div class="prompt-title"><em>The Differentiator.</em></div>
+          <p class="prompt-deck">Find the through-line in your past wins. Get to one sentence that doesn't sound like every other advisor on LinkedIn.</p>
+        </div>
+      </header>
+
+      <div class="tab-bar">
+        <button class="tab active" data-card="differentiator" data-tab="sketch">
+          <span class="tab-meta">Quick start</span>
+          <span class="tab-name"><em>The Sketch</em></span>
+        </button>
+        <button class="tab" data-card="differentiator" data-tab="blueprint">
+          <span class="tab-meta">Deep work</span>
+          <span class="tab-name"><em>The Blueprint</em></span>
+        </button>
+      </div>
+
+      <!-- SKETCH -->
+      <div class="tab-body active" data-card="differentiator" data-body="sketch">
+        <div class="tab-body-meta">
+          <div>
+            <div class="tab-body-meta-item-label">When to use</div>
+            <div class="tab-body-meta-item-value">First time running this. You want a fast read on whether the through-line approach even works for your business.</div>
+          </div>
+          <div>
+            <div class="tab-body-meta-item-label">What you'll need</div>
+            <div class="tab-body-meta-item-value">5 client wins, 1–2 sentences each. Real ones. Specific outcomes. About 10 minutes to gather them.</div>
+          </div>
+        </div>
+
+        <div class="prompt-block-label">
+          <span>Paste this into Claude</span>
+          <button class="copy-btn" data-target="diff-sketch">Copy prompt</button>
+        </div>
+        <div class="prompt-block">
+<pre id="diff-sketch">ROLE: You are a positioning expert who writes one-sentence brand statements for financial advisors.
+
+CONTEXT: I'm pasting 5 specific wins from my career — moments where I helped a client get an outcome they couldn't have gotten elsewhere.
+
+[paste 5 wins]
+
+TASK:
+1. Find the through-line. What's the same instinct underneath all 5?
+2. Write it as a one-sentence positioning statement.
+
+RULES:
+- Banned words: "help," "partner," "trusted advisor," "boutique," "personalized service"
+- Make it a fact, not a claim
+- Under 15 words
+
+OUTPUT: 3 ranked versions + your pick.</pre>
+        </div>
+
+        <div class="example">
+          <button class="example-toggle">
+            <span>See an example output</span>
+            <span class="example-arrow">›</span>
+          </button>
+          <div class="example-body">
+            <div class="example-body-inner">
+              <p><em>Ran this against my own 5 wins. Here's what came back —</em></p>
+              <h4>3 ranked versions</h4>
+              <ol>
+                <li><strong>"Building inside financial services, not adjacent to it."</strong> <em>Most specific. Names the position and the contrast in 7 words.</em></li>
+                <li><strong>"I bring AI infrastructure to advisors who own their futures."</strong> <em>More descriptive but loses the contrast.</em></li>
+                <li><strong>"AI strategy for financial advisors who want to build, not buy."</strong> <em>Generic. Could be any consultant.</em></li>
+              </ol>
+              <h4>My pick</h4>
+              <p>Version 1. The contrast — <em>inside vs adjacent</em> — does more work than the descriptions. It positions me against every consultant who's just bolted "AI" onto a brochure.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLUEPRINT -->
+      <div class="tab-body" data-card="differentiator" data-body="blueprint">
+        <div class="tab-body-meta">
+          <div>
+            <div class="tab-body-meta-item-label">When to use</div>
+            <div class="tab-body-meta-item-value">Your wins are documented. The Sketch returned something close but not sharp enough. You're ready to put the result on your site, your bio, your LinkedIn.</div>
+          </div>
+          <div>
+            <div class="tab-body-meta-item-label">What you'll need</div>
+            <div class="tab-body-meta-item-value">5 client wins (2–3 sentences each, with: who, what they came for, what you actually did, the outcome). About 30 minutes of focus.</div>
+          </div>
+        </div>
+
+        <div class="prompt-block-label">
+          <span>Paste this into Claude</span>
+          <button class="copy-btn" data-target="diff-blueprint">Copy prompt</button>
+        </div>
+        <div class="prompt-block">
+<pre id="diff-blueprint">&lt;role&gt;
+You are a senior brand strategist with 20 years of experience writing positioning statements for professional services firms — the kind of person McKinsey hires to fix a $50M-revenue advisory practice's market identity. You have written for Edward Jones, Goldman Sachs PWM, and the top 5 RIAs in the country. You do not produce slop. You produce one sentence that the founder reads and says "yes, that's it."
+&lt;/role&gt;
+
+&lt;context&gt;
+I am a financial advisor. I have 5 specific client wins below — moments where I delivered an outcome the client could not have gotten elsewhere. These are the raw material. Buried inside them is a single instinct or capability that defines me. Your job is to find it.
+
+[paste 5 wins, 2–3 sentences each, including: who the client was, what they came to me for, what I actually did, and what the outcome was]
+&lt;/context&gt;
+
+&lt;method&gt;
+Work in three passes. Do not skip passes.
+
+Pass 1 — Pattern recognition.
+For each win, identify (a) the surface action I took, and (b) the underlying instinct that drove it. Write these out as a 2-column table. Do not synthesize yet.
+
+Pass 2 — The through-line.
+Looking at the 5 underlying instincts, find the one that appears in all 5 — not 4, not "kind of." If you cannot find one that appears in all 5, tell me my wins are too varied and I need to give you a tighter set. Do not invent a through-line that isn't there.
+
+Pass 3 — Compression.
+Express that through-line as a positioning statement. Constraints:
+— Under 12 words
+— A factual claim, not an aspirational one ("I do X" not "I help with X")
+— No banned words: help, partner, trusted advisor, boutique, personalized, white-glove, holistic, comprehensive, customized
+— Must pass the "stranger test": a stranger reads it and immediately knows what kind of advisor I am, who my clients are, and why I'm different
+&lt;/method&gt;
+
+&lt;output&gt;
+Return exactly:
+
+1. The Pass 1 table.
+2. The Pass 2 through-line statement (one sentence, plain language).
+3. Three Pass 3 positioning candidates, ranked by specificity (most specific first). For each, name the trade-off it makes and the reader it is sharpest for.
+4. Your pick — the one I should use — and the reason in one sentence.
+
+Do not preface. Do not summarize. Do not offer "I hope this helps." Begin with the table.
+&lt;/output&gt;
+
+&lt;self_check&gt;
+Before you respond, verify: (a) every banned word is absent, (b) the through-line appears in all 5 wins not just most, (c) the candidates are facts not claims. If any check fails, redo silently before output.
+&lt;/self_check&gt;</pre>
+        </div>
+
+        <div class="example">
+          <button class="example-toggle">
+            <span>See what the output structure looks like</span>
+            <span class="example-arrow">›</span>
+          </button>
+          <div class="example-body">
+            <div class="example-body-inner">
+              <h4>Pass 1 — Pattern table</h4>
+              <p><em>(For each win, two columns: surface action / underlying instinct.)</em></p>
+              <ul>
+                <li><strong>Win 1:</strong> Rebuilt their lead funnel · <em>Saw what was structurally missing</em></li>
+                <li><strong>Win 2:</strong> Wrote the prompt that generated their newsletter · <em>Built the system, not the deliverable</em></li>
+                <li><strong>Win 3:</strong> Picked their CRM · <em>Chose the tool the future demanded, not the present</em></li>
+                <li><em>(...continues for all 5)</em></li>
+              </ul>
+              <h4>Pass 2 — Through-line</h4>
+              <p><em>"I build the infrastructure others assume they have to buy."</em></p>
+              <h4>Pass 3 — Positioning candidates</h4>
+              <ol>
+                <li><strong>"I build inside financial services, not adjacent to it."</strong> <em>Most specific. Names a contrast and a position. Sharpest for advisors who feel surrounded by 'consultants' who don't actually build.</em></li>
+                <li><strong>"AI infrastructure for advisors who choose to operate, not outsource."</strong> <em>Adds the philosophical wedge. Sharpest for operators with a building instinct.</em></li>
+                <li><strong>"I make the systems advisors thought they had to buy."</strong> <em>Most general. Sharpest for solo RIAs starting their own ops.</em></li>
+              </ol>
+              <h4>Pick</h4>
+              <p>Version 1. The "inside / adjacent" contrast is doing structural work — it's not describing what I do, it's positioning me against a category the reader already knows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- PROMPT 02 — ICP -->
+    <!-- ============================================================ -->
+    <article class="prompt-card" id="icp">
+      <header class="prompt-card-header">
+        <div class="prompt-num">02</div>
+        <div class="prompt-title-block">
+          <div class="prompt-title"><em>The ICP.</em></div>
+          <p class="prompt-deck">Beyond demographics. Find the psychological pattern in your three favorite clients. That's your real ICP — and that's who you build everything for.</p>
+        </div>
+      </header>
+
+      <div class="tab-bar">
+        <button class="tab active" data-card="icp" data-tab="sketch">
+          <span class="tab-meta">Quick start</span>
+          <span class="tab-name"><em>The Sketch</em></span>
+        </button>
+        <button class="tab" data-card="icp" data-tab="blueprint">
+          <span class="tab-meta">Deep work</span>
+          <span class="tab-name"><em>The Blueprint</em></span>
+        </button>
+      </div>
+
+      <!-- SKETCH -->
+      <div class="tab-body active" data-card="icp" data-body="sketch">
+        <div class="tab-body-meta">
+          <div>
+            <div class="tab-body-meta-item-label">When to use</div>
+            <div class="tab-body-meta-item-value">You have a vague sense of "who you serve" but the words you use sound demographic — net worth ranges, life stages, generic industry verticals.</div>
+          </div>
+          <div>
+            <div class="tab-body-meta-item-label">What you'll need</div>
+            <div class="tab-body-meta-item-value">Three favorite clients, described by what makes them great to work with — not their wallet.</div>
+          </div>
+        </div>
+
+        <div class="prompt-block-label">
+          <span>Paste this into Claude</span>
+          <button class="copy-btn" data-target="icp-sketch">Copy prompt</button>
+        </div>
+        <div class="prompt-block">
+<pre id="icp-sketch">ROLE: You are an ICP definition expert. Demographics tell you nothing. I need what's psychologically true about my best clients.
+
+CONTEXT: My 3 favorite clients to work with — what makes them great clients, not their net worth:
+
+[paste descriptions]
+
+TASK:
+1. Find the psychological pattern. What's the same about how these three people think, decide, or operate?
+2. Write it as: "I work best with [X] who [Y]."
+3. Identify 3 specific places I'd find more of these people. Not "LinkedIn." Not "referrals." Specific.
+
+OUTPUT: ICP statement + 3 finding places.</pre>
+        </div>
+
+        <div class="example">
+          <button class="example-toggle">
+            <span>See an example output</span>
+            <span class="example-arrow">›</span>
+          </button>
+          <div class="example-body">
+            <div class="example-body-inner">
+              <h4>ICP statement</h4>
+              <p><em>"I work best with second-generation business owners who'd rather understand the system than trust the expert."</em></p>
+              <h4>3 finding places</h4>
+              <ol>
+                <li><strong>EO Forum chapters in tier-2 cities</strong> — second-gen operators outside coastal metros are over-represented and under-served by typical advisors.</li>
+                <li><strong>Comments on Build in Public threads</strong> — the people asking detailed follow-up questions on operational posts, not the cheerleaders.</li>
+                <li><strong>The Family Business Magazine Substack</strong> — readers, not subscribers. Look at who shares posts publicly with their own commentary added.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLUEPRINT -->
+      <div class="tab-body" data-card="icp" data-body="blueprint">
+        <div class="tab-body-meta">
+          <div>
+            <div class="tab-body-meta-item-label">When to use</div>
+            <div class="tab-body-meta-item-value">You're about to redesign your website, refresh your sales process, or build a new offering. The ICP will drive every word and channel decision downstream.</div>
+          </div>
+          <div>
+            <div class="tab-body-meta-item-label">What you'll need</div>
+            <div class="tab-body-meta-item-value">Three favorite clients with depth — recent conversations you remember, decisions they made, sentences they actually said. Worth re-reading old emails for an hour.</div>
+          </div>
+        </div>
+
+        <div class="prompt-block-label">
+          <span>Paste this into Claude</span>
+          <button class="copy-btn" data-target="icp-blueprint">Copy prompt</button>
+        </div>
+        <div class="prompt-block">
+<pre id="icp-blueprint">&lt;role&gt;
+You are a senior ethnographic researcher who specializes in high-trust professional services. You do not believe in demographic ICPs. You believe psychology drives buying behavior and that demographics are downstream noise. You have built ICPs for the top 10 RIAs in the country and your work routinely results in 3x conversion lifts because you find the psychological pattern competitors miss.
+&lt;/role&gt;
+
+&lt;context&gt;
+I'm going to give you my three favorite clients to work with — the ones I'd clone if I could. Not the highest-paying. The most psychologically aligned. Your job is to find what makes them the same kind of person, then tell me where to find more of them.
+
+For each client, I'll provide:
+— A brief description of who they are professionally
+— What they came to me for
+— A specific moment or sentence that captures how they think
+— Why they were a great client to work with
+
+[paste 3 client portraits, ~5–8 sentences each]
+&lt;/context&gt;
+
+&lt;method&gt;
+Pass 1 — Decision pattern.
+For each client, extract: (a) the dominant decision style (analytical / intuitive / consensus-seeking / contrarian / etc), (b) what they trust as evidence, (c) what they distrust on principle.
+
+Pass 2 — Psychological signature.
+Find the one psychological trait shared by all three. It must show up in all three, not "kind of." If you can't find one, tell me — don't invent.
+
+Pass 3 — Identity verb.
+Find the one verb that all three would use to describe themselves before any noun. Examples: "operate," "build," "compound," "steward," "challenge." This is the verb that drives their professional self-image.
+
+Pass 4 — ICP statement.
+Construct: "I work best with [identity verb-er noun] who [psychological signature]." Example structure only — generate the actual content from passes 1–3.
+
+Pass 5 — Finding ground.
+Identify five places this person already exists in concentrated form. Not channels (LinkedIn, X). Specific spaces — newsletters, podcasts, communities, events, books, threads — that this psychological type self-selects into. For each, name a single signal the reader would emit (a comment, a share, a question) that would identify them in the wild.
+&lt;/method&gt;
+
+&lt;output&gt;
+Deliver in this exact order:
+
+1. Pass 1 table — three columns (decision style, trusted evidence, distrusted defaults), one row per client.
+2. Pass 2 — the shared psychological signature, in plain language.
+3. Pass 3 — the identity verb, with one sentence on why this verb and not its neighbors.
+4. Pass 4 — the ICP statement, then a "this is NOT" companion sentence to sharpen the contrast.
+5. Pass 5 — five finding places with their identifying signals, ranked by concentration of the type.
+
+No preamble. No "I hope this helps." Begin with the table.
+&lt;/output&gt;
+
+&lt;self_check&gt;
+Before responding: (a) does the psychological signature actually appear in all three clients, or did you stretch it? (b) does the identity verb describe how they see themselves, or how I see them? (c) are the finding places specific enough that I could go to one tomorrow? Redo silently if any answer is wrong.
+&lt;/self_check&gt;</pre>
+        </div>
+
+        <div class="example">
+          <button class="example-toggle">
+            <span>See what the output structure looks like</span>
+            <span class="example-arrow">›</span>
+          </button>
+          <div class="example-body">
+            <div class="example-body-inner">
+              <h4>Pass 1 — Decision pattern</h4>
+              <p><em>(Three-column table mapping each client's style.)</em></p>
+              <h4>Pass 2 — Psychological signature</h4>
+              <p><em>"They distrust expertise that can't show its work."</em></p>
+              <h4>Pass 3 — Identity verb</h4>
+              <p><em>"Operate."</em> Not "build" (too maker-coded), not "manage" (too passive). They see themselves as people who run things, daily, with their hands.</p>
+              <h4>Pass 4 — ICP</h4>
+              <p><strong>Is:</strong> <em>"I work best with operators who distrust expertise that can't show its work."</em></p>
+              <p><strong>Is NOT:</strong> <em>"People who hire experts to take the problem off their plate."</em></p>
+              <h4>Pass 5 — Five finding places</h4>
+              <ol>
+                <li><strong>The Audit comments section.</strong> Signal: anyone asking "how did you measure that?" before commenting on the conclusion.</li>
+                <li><strong>EO Forum, second-gen ops track.</strong> Signal: the member who runs his own meeting because he doesn't trust the facilitator.</li>
+                <li><strong>(... three more, ranked by concentration)</strong></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- PROMPT 03 — VOICE -->
+    <!-- ============================================================ -->
+    <article class="prompt-card" id="voice">
+      <header class="prompt-card-header">
+        <div class="prompt-num">03</div>
+        <div class="prompt-title-block">
+          <div class="prompt-title"><em>The Voice.</em></div>
+          <p class="prompt-deck">Make AI sound like you, not like AI. The voice rules you can paste at the top of any future writing task.</p>
+        </div>
+      </header>
+
+      <div class="tab-bar">
+        <button class="tab active" data-card="voice" data-tab="sketch">
+          <span class="tab-meta">Quick start</span>
+          <span class="tab-name"><em>The Sketch</em></span>
+        </button>
+        <button class="tab" data-card="voice" data-tab="blueprint">
+          <span class="tab-meta">Deep work</span>
+          <span class="tab-name"><em>The Blueprint</em></span>
+        </button>
+      </div>
+
+      <!-- SKETCH -->
+      <div class="tab-body active" data-card="voice" data-body="sketch">
+        <div class="tab-body-meta">
+          <div>
+            <div class="tab-body-meta-item-label">When to use</div>
+            <div class="tab-body-meta-item-value">Everything you generate with AI sounds slightly off — like a polished version of a stranger. You want to fix that in one prompt.</div>
+          </div>
+          <div>
+            <div class="tab-body-meta-item-label">What you'll need</div>
+            <div class="tab-body-meta-item-value">Five things you've written that sound most like you at your best — emails, posts, captions, anything. Reread before pasting.</div>
+          </div>
+        </div>
+
+        <div class="prompt-block-label">
+          <span>Paste this into Claude</span>
+          <button class="copy-btn" data-target="voice-sketch">Copy prompt</button>
+        </div>
+        <div class="prompt-block">
+<pre id="voice-sketch">ROLE: You are a voice-match writer for personal brands.
+
+CONTEXT: 5 things I've written that sound like me at my best — emails, posts, captions:
+
+[paste 5 samples]
+
+TASK:
+1. Identify the 5 patterns in how I write. Be specific: sentence length, vocabulary, what I avoid, what I lean into.
+2. Build me a "voice rules" prompt I can paste at the top of any future writing task.
+
+OUTPUT: 5 voice rules + a ready-to-paste voice prompt.</pre>
+        </div>
+
+        <div class="example">
+          <button class="example-toggle">
+            <span>See an example output</span>
+            <span class="example-arrow">›</span>
+          </button>
+          <div class="example-body">
+            <div class="example-body-inner">
+              <h4>The 5 voice rules</h4>
+              <ol>
+                <li><strong>Sentence length: short, then shorter.</strong> Average ~12 words. Drops to 4 when it matters.</li>
+                <li><strong>Lead with a contradiction, not a thesis.</strong> First sentence reverses an assumption rather than declaring a point.</li>
+                <li><strong>No hype words.</strong> Banned: "amazing," "powerful," "transform," "unlock," "level up."</li>
+                <li><strong>Concrete nouns over abstract concepts.</strong> "The prompt" not "the AI tool."</li>
+                <li><strong>One ask per piece.</strong> Never two CTAs. Never three.</li>
+              </ol>
+              <h4>Ready-to-paste voice prompt</h4>
+              <p><em>"Write in my voice. Five rules: short sentences (avg 12 words), lead with a contradiction, no hype words, concrete nouns over abstractions, one ask per piece. If a sentence breaks a rule, rewrite it before you finish."</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLUEPRINT -->
+      <div class="tab-body" data-card="voice" data-body="blueprint">
+        <div class="tab-body-meta">
+          <div>
+            <div class="tab-body-meta-item-label">When to use</div>
+            <div class="tab-body-meta-item-value">You're going to use AI to draft content regularly — newsletters, posts, captions, even client communication. The voice prompt becomes infrastructure you reuse hundreds of times.</div>
+          </div>
+          <div>
+            <div class="tab-body-meta-item-label">What you'll need</div>
+            <div class="tab-body-meta-item-value">10–15 samples (longer the better). Mix of formats. Include at least one piece you remember being proud of and one you barely edited.</div>
+          </div>
+        </div>
+
+        <div class="prompt-block-label">
+          <span>Paste this into Claude</span>
+          <button class="copy-btn" data-target="voice-blueprint">Copy prompt</button>
+        </div>
+        <div class="prompt-block">
+<pre id="voice-blueprint">&lt;role&gt;
+You are a forensic voice analyst — the kind of editor who can read a paragraph blind and identify the writer. You have spent 15 years extracting voice systems for celebrity ghostwriters, founder-led brands, and category-defining publications. You do not produce generic writing advice. You find the specific, replicable patterns that make one writer sound like themselves and not like anyone else.
+&lt;/role&gt;
+
+&lt;context&gt;
+Below are 10–15 samples of writing that sound like me at my best. Mixed formats — emails, posts, captions, drafts. Some short, some long. All of them feel like me when I read them back.
+
+[paste samples]
+
+Your job is to extract the system that produces this voice — not describe it, extract it — so I can paste it at the top of any future writing task and get output that sounds like me.
+&lt;/context&gt;
+
+&lt;method&gt;
+Pass 1 — Sentence-level patterns.
+Quantify: average sentence length, variance, where short sentences appear (openings, climaxes, closes), use of fragments, use of em dashes vs commas vs colons. Be numerical where you can.
+
+Pass 2 — Vocabulary signature.
+Identify 8–12 words or phrases I use repeatedly. Identify 8–12 words I never use that a similar writer would. The presence list and the absence list are equally important.
+
+Pass 3 — Structural moves.
+Find 3–5 structural moves that repeat across pieces. Examples of move-types: opening with a contradiction; the one-line paragraph for emphasis; the question that answers itself; the parallel construction; the deliberate sentence fragment as conclusion.
+
+Pass 4 — Voice non-negotiables.
+What does this writer never do? Five rules expressed as bans. These are the rules that, if violated, would make the output sound like a different person.
+
+Pass 5 — The reusable voice prompt.
+Synthesize passes 1–4 into a single block of instructions I can paste at the top of any future prompt. Constraints on the synthesized prompt:
+— Under 200 words
+— Imperative voice ("Do X. Don't do Y.")
+— Numbered or bulleted, scannable
+— No meta-commentary, no "this writer..."  — speak as instructions to the next AI
+&lt;/method&gt;
+
+&lt;output&gt;
+Deliver in this order:
+
+1. Pass 1 — sentence patterns with numbers.
+2. Pass 2 — two columns: words I use / words I don't.
+3. Pass 3 — three to five structural moves with one example of each pulled from my samples.
+4. Pass 4 — five non-negotiables.
+5. Pass 5 — the reusable voice prompt, ready to paste.
+6. A two-sentence "voice description" — the one I'd use to brief a new ghostwriter.
+
+No preamble. Begin with Pass 1.
+&lt;/output&gt;
+
+&lt;self_check&gt;
+Before responding: (a) are your patterns actually present in the samples, or are you projecting common writing advice? (b) does the reusable voice prompt produce output that would pass for me, or would I notice it's off? (c) is the absence list as specific as the presence list? Redo silently if any check fails.
+&lt;/self_check&gt;</pre>
+        </div>
+
+        <div class="example">
+          <button class="example-toggle">
+            <span>See what the output structure looks like</span>
+            <span class="example-arrow">›</span>
+          </button>
+          <div class="example-body">
+            <div class="example-body-inner">
+              <h4>Pass 1 — Sentence patterns</h4>
+              <p>Average length: 11.4 words. Variance: high — frequent 4-word sentences interspersed with 18–22 word ones. Em-dash use 3.2x average for the genre. Colons rare. Question marks at openings ~1 in 4 pieces.</p>
+              <h4>Pass 2 — Vocabulary signature</h4>
+              <p><em>(Two-column table: words used vs. words avoided.)</em></p>
+              <h4>Pass 5 — Reusable voice prompt</h4>
+              <pre style="background: var(--cream); padding: 16px; font-size: 12px; margin-top: 8px;">Write in my voice. Rules:
+1. Average sentence ~12 words. Drop to 4 at climax.
+2. Open with a contradiction, never a thesis.
+3. Use em-dashes for emphasis. Avoid colons.
+4. Banned words: amazing, powerful, transform, unlock, level up, dive in, journey, leverage.
+5. One ask per piece. No exceptions.
+6. End with a fragment when the point lands.
+
+If any sentence breaks a rule, rewrite it before you finish.</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CTA -->
+<!-- ============================================================ -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Run them in order. Save the page.</div>
+    <h2><em>Use them<br>this week.</em></h2>
+    <div class="cta-rule"></div>
+    <p>Every Wednesday a new prompt set drops here. Different topic, same dual-track structure. The Sketch when you want fast. The Blueprint when you want sharp.</p>
+    <p>Built by <a href="https://www.instagram.com/keirdillon" target="_blank" rel="noopener" class="cta-link">@keirdillon</a> — financial advisor building inside the industry, not adjacent to it.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
+<!-- ============================================================ -->
+<footer>
+  <div class="inner">
+    <div>© 2026 Keir Dillon</div>
+    <div><a href="/prompts">All prompt sets</a> &nbsp;·&nbsp; <a href="/">keirdillon.com</a></div>
+  </div>
+</footer>
+
+<script>
+// TAB SWITCHING
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const card = tab.dataset.card;
+    const target = tab.dataset.tab;
+
+    // Deactivate all tabs and bodies for this card
+    document.querySelectorAll(`.tab[data-card="${card}"]`).forEach(t => t.classList.remove('active'));
+    document.querySelectorAll(`.tab-body[data-card="${card}"]`).forEach(b => b.classList.remove('active'));
+
+    // Activate clicked tab and matching body
+    tab.classList.add('active');
+    document.querySelector(`.tab-body[data-card="${card}"][data-body="${target}"]`).classList.add('active');
+  });
+});
+
+// COPY BUTTONS
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = document.getElementById(btn.dataset.target);
+    if (!target) return;
+    const text = target.textContent
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&amp;/g, '&');
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = 'Copied';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copy prompt';
+        btn.classList.remove('copied');
+      }, 1800);
+    });
+  });
+});
+
+// EXAMPLE TOGGLES
+document.querySelectorAll('.example-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.parentElement.classList.toggle('open');
+  });
+});
+</script>
+</body>
+</html>
