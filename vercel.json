@@ -6,11 +6,6 @@
       "source": "/www.keirdillon.com/:path*",
       "destination": "https://keirdillon.com/:path*",
       "statusCode": 301
-    },
-    {
-      "source": "/positioning",
-      "destination": "/resources/positioning-blueprint",
-      "statusCode": 301
     }
   ],
   "headers": [
