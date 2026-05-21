@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
   <noscript>
     <style>
       .fade-in { opacity: 1 !important; transform: none !important; }
@@ -22,10 +22,10 @@
     </style>
   </noscript>
 
-  <link rel="canonical" href="https://keirdillon.com/positioning">
+  <link rel="canonical" href="https://keirdillon.com/resources/positioning-blueprint">
   <meta property="og:title" content="The Positioning Blueprint | Keir Dillon">
   <meta property="og:description" content="Find the positioning you are too close to see. A free three-pass system for financial advisors. Runs in Claude or ChatGPT.">
-  <meta property="og:url" content="https://keirdillon.com/positioning">
+  <meta property="og:url" content="https://keirdillon.com/resources/positioning-blueprint">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Positioning Blueprint | Keir Dillon">
@@ -37,7 +37,9 @@
        except the .promptbox <pre> code blocks, which use a system monospace
        stack because they are copyable code. -->
   <style>
-    .pb .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad); }
+    /* .wrap sets horizontal padding only; vertical section padding lives on
+       .pb section, so the two never collide on the `padding` shorthand. */
+    .pb .wrap { max-width: var(--max-w); margin: 0 auto; padding-left: var(--pad); padding-right: var(--pad); }
 
     .pb .eyebrow {
       font-family: var(--body);
@@ -102,7 +104,10 @@
     }
 
     /* ── sections ── */
-    .pb section { padding: clamp(88px, 10vw, 150px) 0; }
+    /* Every major section, light or dark, gets equal generous vertical
+       padding: ~110-134px desktop, ~72px mobile. The dark bands are <section>
+       elements too, so they pick this up and no longer touch their neighbors. */
+    .pb section { padding-top: clamp(72px, 11vw, 134px); padding-bottom: clamp(72px, 11vw, 134px); }
     .pb .sec-head { max-width: 20em; }
     .pb .split {
       display: grid;
@@ -548,7 +553,7 @@
         <li><a href="/">Home</a></li>
         <li><a href="/story">Story</a></li>
         <li><a href="/thinking">Thinking</a></li>
-        <li><a href="/positioning" class="active">Positioning</a></li>
+        <li><a href="/resources" class="active">Resources</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
@@ -888,7 +893,7 @@ You are here to find what survives stress. If a candidate fails three or more te
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="/main.js"></script>
   <script>
   // Progressive scroll reveal for .pb .reveal elements
   (function () {
