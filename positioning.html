@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Positioning Blueprint | Keir Dillon</title>
+  <meta name="description" content="A free, structured three-pass system that gives financial advisors the outside perspective they cannot generate on themselves. The structured-thinking half of a real positioning engagement, in about two hours.">
+  <meta name="theme-color" content="#FAF8F0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22%238C6840%22/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <noscript>
+    <style>
+      .fade-in { opacity: 1 !important; transform: none !important; }
+      @media (max-width: 900px) {
+        .nav-links { display: flex !important; flex-wrap: wrap; gap: 14px; position: static !important; padding: 0 !important; border: 0 !important; background: transparent !important; }
+        .nav-toggle { display: none !important; }
+      }
+    </style>
+  </noscript>
+
+  <link rel="canonical" href="https://keirdillon.com/positioning">
+  <meta property="og:title" content="The Positioning Blueprint | Keir Dillon">
+  <meta property="og:description" content="Find the positioning you are too close to see. A free three-pass system for financial advisors. Runs in Claude or ChatGPT.">
+  <meta property="og:url" content="https://keirdillon.com/positioning">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Positioning Blueprint | Keir Dillon">
+  <meta name="twitter:description" content="Find the positioning you are too close to see. A free three-pass system for financial advisors.">
+
+  <!-- Positioning Blueprint — page-scoped styles.
+       All selectors are prefixed with .pb and live inline, so they only
+       affect this page. Every color and font resolves to a style.css token,
+       except the .promptbox <pre> code blocks, which use a system monospace
+       stack because they are copyable code. -->
+  <style>
+    .pb .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad); }
+
+    .pb .eyebrow {
+      font-family: var(--body);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cognac);
+      margin-bottom: 16px;
+    }
+
+    .pb .rule { width: 62px; height: 2px; background: var(--cognac); margin: 0 0 26px; }
+
+    .pb h1, .pb h2, .pb h3 {
+      font-family: var(--display);
+      font-weight: 400;
+      color: var(--deep);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    .pb h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.12; }
+    .pb h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.2; }
+    .pb h1 em, .pb h2 em { font-style: italic; color: var(--cognac); }
+
+    .pb p {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--warm-gray);
+      max-width: 34em;
+      overflow-wrap: break-word;
+    }
+
+    /* ── buttons ── */
+    .pb .btns { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 36px; }
+    .pb .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border: 1px solid transparent;
+      transition: all 0.3s;
+      cursor: pointer;
+      max-width: 100%;
+    }
+    .pb .btn-solid { background: var(--deep); color: var(--ivory); border-color: var(--deep); }
+    .pb .btn-solid:hover { background: var(--charcoal); border-color: var(--charcoal); }
+    .pb .btn-ghost { background: transparent; color: var(--warm-gray); border-color: var(--sand); }
+    .pb .btn-ghost:hover { color: var(--deep); border-color: var(--cognac); background: var(--cream); }
+    .pb .btn .ar { font-family: var(--display); font-size: 1rem; line-height: 1; }
+    .pb .micro {
+      margin-top: 18px;
+      font-size: 0.78rem;
+      letter-spacing: 0.03em;
+      color: var(--stone);
+      font-weight: 400;
+    }
+
+    /* ── sections ── */
+    .pb section { padding: clamp(88px, 10vw, 150px) 0; }
+    .pb .sec-head { max-width: 20em; }
+    .pb .split {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: start;
+    }
+    .pb .split-head h2 { max-width: 12em; }
+    .pb .split-body p { max-width: 36em; }
+    .pb .split-body p + p { margin-top: 18px; }
+
+    /* ── hero ── */
+    .pb .lede {
+      display: block;
+      min-height: 0;
+      padding-top: clamp(122px, 14vw, 152px);
+      padding-bottom: clamp(80px, 10vw, 120px);
+    }
+    .pb .lede-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(36px, 5vw, 72px);
+      align-items: center;
+    }
+    .pb .lede h1 { margin-bottom: 24px; }
+    .pb .lede p { font-size: 1.05rem; }
+
+    /* ── document mockup ── */
+    .pb .doc {
+      background: var(--deep);
+      color: var(--cream);
+      padding: 44px 38px 30px;
+      border: 1px solid var(--deep);
+      position: relative;
+      aspect-ratio: 8.5 / 11;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 380px;
+      margin-inline: auto;
+    }
+    .pb .doc .d-eyebrow {
+      font-size: 0.6rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--stone);
+      font-weight: 500;
+    }
+    .pb .doc .d-rule { width: 48px; height: 2px; background: var(--cognac); margin-top: 14px; }
+    .pb .doc .d-kicker {
+      font-size: 0.68rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 18px;
+    }
+    .pb .doc .d-title {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+      line-height: 1.02;
+      color: var(--cream);
+    }
+    .pb .doc .d-title em { font-style: italic; color: var(--tan); }
+    .pb .doc .d-sub {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 0.88rem;
+      line-height: 1.4;
+      color: var(--stone);
+      margin-top: 18px;
+    }
+    .pb .doc .d-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+    .pb .doc .d-foot .wm {
+      font-family: var(--body);
+      color: var(--cream);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+    }
+    .pb .doc-tag {
+      position: absolute;
+      top: -13px;
+      right: 24px;
+      background: var(--cognac);
+      color: var(--ivory);
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 6px 12px;
+    }
+
+    /* ── panel-seam grid ── */
+    .pb .seam {
+      display: grid;
+      gap: 1px;
+      background: var(--parchment);
+      border: 1px solid var(--parchment);
+      margin-top: 56px;
+    }
+    .pb .seam-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .pb .cell { background: var(--ivory); padding: 44px 36px; transition: background 0.3s; }
+    .pb .cell:hover { background: var(--cream); }
+    .pb .cell .c-n {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 2.6rem;
+      color: var(--cognac);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .pb .cell .c-min {
+      font-family: var(--body);
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--stone);
+      font-weight: 500;
+      margin-bottom: 9px;
+    }
+    .pb .cell p { font-size: 0.9rem; line-height: 1.7; color: var(--warm-gray); }
+
+    /* ── flow diagram ── */
+    .pb .flow { margin-top: 56px; max-width: 760px; }
+    .pb .fstep { display: flex; gap: 26px; padding-bottom: 36px; position: relative; }
+    .pb .fstep:not(.last)::before {
+      content: '';
+      position: absolute;
+      left: 23px;
+      top: 50px;
+      bottom: 0;
+      width: 1px;
+      background: var(--parchment);
+    }
+    .pb .fnum {
+      width: 47px;
+      height: 47px;
+      flex: none;
+      border: 1px solid var(--cognac);
+      color: var(--cognac);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--display);
+      font-size: 1.3rem;
+      background: var(--ivory);
+      position: relative;
+      z-index: 1;
+    }
+    .pb .fnum.done { background: var(--cognac); color: var(--cream); border-color: var(--cognac); }
+    .pb .ftitle {
+      font-family: var(--display);
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--deep);
+      margin-bottom: 6px;
+    }
+    .pb .fdesc { font-size: 0.9rem; line-height: 1.7; color: var(--warm-gray); max-width: 30em; }
+    .pb .ftag {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cognac);
+      font-weight: 500;
+      margin-top: 9px;
+    }
+    .pb .flow-note {
+      margin-top: 26px;
+      border-left: 2px solid var(--cognac);
+      padding: 6px 0 6px 20px;
+      max-width: 36em;
+    }
+    .pb .flow-note p {
+      font-family: var(--display);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--deep);
+      max-width: none;
+    }
+
+    /* ── dark bands ── */
+    .pb .band { background: var(--deep); color: var(--cream); }
+    .pb .band .eyebrow { color: var(--tan); }
+    .pb .band h2 { color: var(--cream); }
+    .pb .band p { color: var(--stone); }
+    .pb .quote {
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(1.5rem, 3.4vw, 2.5rem);
+      line-height: 1.3;
+      color: var(--cream);
+      max-width: 16em;
+    }
+    .pb .quote-sub {
+      margin-top: 34px;
+      font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+      color: var(--stone);
+      max-width: 32em;
+    }
+
+    /* ── outcome grid ── */
+    .pb .out-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--parchment);
+      border: 1px solid var(--parchment);
+      margin-top: 56px;
+    }
+    .pb .out { background: var(--ivory); padding: 36px 32px; transition: background 0.3s; }
+    .pb .out:hover { background: var(--cream); }
+    .pb .out .o-t {
+      font-family: var(--display);
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--deep);
+      margin-bottom: 8px;
+    }
+    .pb .out p { font-size: 0.9rem; color: var(--warm-gray); max-width: none; }
+
+    /* ── credits ── */
+    .pb .credits { margin-top: 56px; border-top: 1px solid var(--parchment); }
+    .pb .cred {
+      display: flex;
+      gap: 26px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--parchment);
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    .pb .cred .cr-n {
+      font-family: var(--display);
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--deep);
+      min-width: 230px;
+    }
+    .pb .cred .cr-d { font-size: 0.9rem; color: var(--warm-gray); flex: 1; min-width: 240px; }
+    .pb .cred .cr-d em { font-style: italic; color: var(--deep); }
+
+    /* ── working tool: do-it-live blueprint ── */
+    .pb .tool-intro { max-width: 36em; }
+    .pb .tool-block { margin-top: clamp(60px, 8vw, 104px); }
+    .pb .tool-h {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      color: var(--deep);
+      line-height: 1.1;
+      margin: 6px 0 14px;
+    }
+    .pb .tool-sub { max-width: 38em; margin-bottom: 30px; }
+
+    .pb .disc-cat { margin-top: 34px; }
+    .pb .disc-cat-h {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--parchment);
+      flex-wrap: wrap;
+    }
+    .pb .disc-cat-n {
+      font-family: var(--body);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cognac);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .pb .disc-cat-t {
+      font-family: var(--display);
+      font-style: italic;
+      font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+      color: var(--deep);
+    }
+    .pb .qa { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--parchment); }
+    .pb .qa:last-child { border-bottom: none; }
+    .pb .qa-n {
+      font-family: var(--display);
+      font-size: 1.3rem;
+      color: var(--cognac);
+      min-width: 24px;
+      line-height: 1.3;
+    }
+    .pb .qa-t { font-size: clamp(0.95rem, 1.15vw, 1.05rem); line-height: 1.55; color: var(--deep); }
+    .pb .qa-ex {
+      display: block;
+      margin-top: 7px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: var(--stone);
+      font-weight: 300;
+    }
+    .pb .qa-ex b {
+      color: var(--cognac);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      margin-right: 7px;
+    }
+    .pb .vex { padding: 22px 0; border-bottom: 1px solid var(--parchment); }
+    .pb .vex:first-of-type { border-top: 1px solid var(--parchment); }
+    .pb .vex-q {
+      font-family: var(--display);
+      font-style: italic;
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      color: var(--deep);
+      margin-bottom: 11px;
+    }
+    .pb .vex-l {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--charcoal);
+      margin-bottom: 7px;
+      max-width: 44em;
+      font-weight: 300;
+    }
+    .pb .vex-l.ex { color: var(--warm-gray); }
+    .pb .vex-l b {
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone);
+      font-weight: 600;
+      margin-right: 9px;
+    }
+    .pb .vex-l.ex b { color: var(--cognac); }
+
+    .pb .promptbox { margin-top: 22px; border: 1px solid var(--parchment); }
+    .pb .promptbox-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--deep);
+      padding: 9px 14px;
+      gap: 12px;
+    }
+    .pb .promptbox-bar span {
+      font-family: var(--body);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream);
+      font-weight: 500;
+    }
+    .pb .copybtn {
+      font-family: var(--body);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--deep);
+      background: var(--cream);
+      border: 1px solid var(--cream);
+      padding: 7px 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+    .pb .copybtn:hover { background: var(--ivory); border-color: var(--ivory); }
+    .pb .promptbox pre {
+      margin: 0;
+      padding: 18px 20px;
+      background: var(--cream);
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      font-size: 0.72rem;
+      line-height: 1.6;
+      color: var(--deep);
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* ── final CTA ── */
+    .pb .final { background: var(--deep); color: var(--cream); }
+    .pb .final .eyebrow { color: var(--tan); }
+    .pb .final h2 { color: var(--cream); max-width: 14em; margin-bottom: 8px; }
+    .pb .final .btn-solid { background: var(--cream); color: var(--deep); border-color: var(--cream); }
+    .pb .final .btn-solid:hover { background: var(--ivory); border-color: var(--ivory); }
+    .pb .final .micro { color: var(--stone); }
+
+    /* ── scroll reveal (only hidden when JS is present) ── */
+    .js .pb .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .js .pb .reveal.in { opacity: 1; transform: none; }
+
+    /* ── responsive ── */
+    @media (max-width: 860px) {
+      .pb .lede-grid { grid-template-columns: 1fr; gap: 48px; }
+      .pb .seam-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 820px) {
+      .pb .split { grid-template-columns: 1fr; gap: 30px; }
+    }
+    @media (max-width: 640px) {
+      .pb .out-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .js .pb .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+  <script>
+    document.documentElement.classList.add('js');
+    function copyPrompt(btn) {
+      var pre = btn.closest('.promptbox').querySelector('pre');
+      navigator.clipboard.writeText(pre.innerText).then(function () {
+        var o = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = o; }, 1600);
+      }).catch(function () { btn.textContent = 'Copy failed'; });
+    }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-THTL2M1JL2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-THTL2M1JL2");
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="walnut-bar" aria-hidden="true"></div>
+
+  <nav aria-label="Primary">
+    <div class="nav-inner">
+      <a href="/" class="nav-mark">Keir <span>Dillon</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/story">Story</a></li>
+        <li><a href="/thinking">Thinking</a></li>
+        <li><a href="/positioning" class="active">Positioning</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main" class="pb">
+
+  <!-- HERO -->
+  <section class="lede wrap">
+    <div class="lede-grid">
+      <div class="reveal">
+        <div class="eyebrow">For financial advisors &middot; A free tool</div>
+        <h1>You can fix everyone's positioning but <em>your own.</em></h1>
+        <p>There is a reason for that, and it has a name. The Positioning Blueprint gives you the outside perspective you cannot generate on yourself: a structured, three-pass system that turns your own answers into one sharp sentence. The structured-thinking half of a real engagement, in about two hours.</p>
+        <div class="btns">
+          <a href="#blueprint" class="btn btn-solid">Start the Blueprint <span class="ar" aria-hidden="true">&rarr;</span></a>
+          <a href="/The_Positioning_Blueprint.pdf" download class="btn btn-ghost">Download the PDF</a>
+        </div>
+        <div class="micro">Free. No course, no upsell. Runs in Claude or ChatGPT.</div>
+      </div>
+      <div class="reveal">
+        <div class="doc">
+          <span class="doc-tag">Free &middot; PDF</span>
+          <div>
+            <div class="d-eyebrow">For financial advisors</div>
+            <div class="d-rule"></div>
+          </div>
+          <div>
+            <div class="d-kicker">The Positioning Blueprint</div>
+            <div class="d-title">The Three-Prompt<br><em>System</em></div>
+            <div class="d-sub">Find the positioning you are too close to see.</div>
+          </div>
+          <div class="d-foot"><span class="wm">DI//ON</span><span>Keir Dillon</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch"></div>
+
+  <!-- PROBLEM -->
+  <section class="wrap">
+    <div class="split">
+      <div class="reveal split-head">
+        <div class="eyebrow">Why this is hard</div>
+        <h2>A client lays out a mess and you see it in minutes. Turn that clarity on your own firm and <em>it is gone.</em></h2>
+        <div class="rule" style="margin-top:30px"></div>
+      </div>
+      <div class="reveal split-body">
+        <p>Psychologists named this. Solomon's Paradox: we reason clearly about other people's problems and badly about our own. It is not a skill problem and it is not an intelligence problem. You are too close, and you cannot fix being too close by trying harder.</p>
+        <p>For decades the only answer was to pay someone outside to manufacture that distance for you, which is most of what a $50,000 branding engagement actually buys. This does the same job a different way. It treats your own answers as third-party evidence and reasons about them the way you would reason about a client.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch"></div>
+
+  <!-- WHAT IT IS -->
+  <section class="wrap">
+    <div class="reveal sec-head">
+      <div class="eyebrow">What it is</div>
+      <h2>One pulls it out. One shapes it. <em>One stress-tests it.</em></h2>
+    </div>
+    <div class="seam seam-3 reveal">
+      <div class="cell">
+        <div class="c-n">01</div>
+        <div class="c-min">Discovery</div>
+        <p>You answer a 20-question workbook plus three visual exercises. The raw material comes out. About an hour, and no AI yet.</p>
+      </div>
+      <div class="cell">
+        <div class="c-n">02</div>
+        <div class="c-min">Synthesis</div>
+        <p>A prompt runs your answers through five positioning frameworks and returns five to seven candidate statements, each tied to your own evidence.</p>
+      </div>
+      <div class="cell">
+        <div class="c-n">03</div>
+        <div class="c-min">Pressure Test</div>
+        <p>A prompt runs every candidate through six failure modes and kills what does not survive. One statement is left standing.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch"></div>
+
+  <!-- HOW IT WORKS -->
+  <section class="wrap" id="how">
+    <div class="reveal sec-head">
+      <div class="eyebrow">How to run it</div>
+      <h2>Sit down once. <em>Run it in order.</em></h2>
+    </div>
+    <div class="flow">
+      <div class="fstep reveal">
+        <div class="fnum">01</div>
+        <div><div class="ftitle">Answer the workbook</div><div class="fdesc">Fill in all 20 Discovery questions. Be honest, not polished. This is you, on your own. About an hour.</div><div class="ftag">your foundation</div></div>
+      </div>
+      <div class="fstep reveal">
+        <div class="fnum">02</div>
+        <div><div class="ftitle">Run the Synthesis prompt</div><div class="fdesc">Open a fresh chat. Paste the prompt, then paste your completed workbook beneath it. You get five to seven candidate statements back.</div><div class="ftag">5 to 7 candidates</div></div>
+      </div>
+      <div class="fstep reveal">
+        <div class="fnum">03</div>
+        <div><div class="ftitle">Run the Pressure Test prompt</div><div class="fdesc">In the same chat, paste the second prompt. It scores every candidate and kills the ones that do not survive.</div><div class="ftag">one survives</div></div>
+      </div>
+      <div class="fstep last reveal">
+        <div class="fnum done" aria-hidden="true">&check;</div>
+        <div><div class="ftitle">One statement, stress-tested</div><div class="fdesc">What is left is your position. Take it to your headline, your opener, and the filter for everything you publish.</div></div>
+      </div>
+    </div>
+    <div class="flow-note reveal"><p>One foundation, two prompts, one sitting. It works the same in Claude or ChatGPT.</p></div>
+  </section>
+
+  <div class="stitch"></div>
+
+  <!-- OUTCOME -->
+  <section class="wrap">
+    <div class="reveal sec-head">
+      <div class="eyebrow">What you walk away with</div>
+      <h2>One sentence only you can say, <em>and everywhere to put it.</em></h2>
+    </div>
+    <div class="out-grid reveal">
+      <div class="out"><div class="o-t">Your headline</div><p>The first line of your LinkedIn and your site, word for word.</p></div>
+      <div class="out"><div class="o-t">Your opener</div><p>How you answer "so what do you do?" without reaching for filler.</p></div>
+      <div class="out"><div class="o-t">Your filter</div><p>A test for every post: does this sharpen the statement, or blur it?</p></div>
+      <div class="out"><div class="o-t">Your screen</div><p>A way to tell a good-fit client from a bad-fit one on the first call.</p></div>
+    </div>
+  </section>
+
+  <!-- HONEST CLAIM -->
+  <section class="band">
+    <div class="wrap reveal">
+      <div class="eyebrow">The honest claim</div>
+      <p class="quote">This is not a replacement for a $50,000 consulting engagement. It is the structured-thinking half of one, made accessible.</p>
+      <p class="quote-sub">It will not interview your clients or size your market. It gives you the disciplined distance to see your own firm clearly, which is where most positioning actually breaks.</p>
+    </div>
+  </section>
+
+  <!-- WHO MADE IT -->
+  <section class="wrap">
+    <div class="split">
+      <div class="reveal split-head">
+        <div class="eyebrow">Who made this</div>
+        <h2>Built from real positioning work, <em>not a template.</em></h2>
+        <div class="rule" style="margin-top:30px"></div>
+      </div>
+      <div class="reveal split-body">
+        <p>I am Keir Dillon. I run brand and marketing at a financial firm, and I built this from the same discovery process I use on actual positioning work. The method is mine. The frameworks it runs on are not, and they are credited so you can read the source work yourself.</p>
+      </div>
+    </div>
+    <div class="credits reveal">
+      <div class="cred"><div class="cr-n">Marty Neumeier</div><div class="cr-d"><em>The Brand Gap</em> and <em>Zag</em>. The Onlyness Statement and the discipline of radical differentiation.</div></div>
+      <div class="cred"><div class="cr-n">April Dunford</div><div class="cr-d"><em>Obviously Awesome</em>. Competitive alternatives, and positioning as deliberate context-setting.</div></div>
+      <div class="cred"><div class="cr-n">Grossmann &amp; Kross</div><div class="cr-d">The research on Solomon's Paradox and self-distancing that the whole method is built on.</div></div>
+    </div>
+  </section>
+
+  <div class="stitch"></div>
+
+  <!-- THE BLUEPRINT (do it live) -->
+  <section class="wrap" id="blueprint">
+    <div class="reveal sec-head">
+      <div class="eyebrow">Do it here</div>
+      <h2>The whole method, <em>right on this page.</em></h2>
+    </div>
+    <div class="rule" style="margin-top:30px"></div>
+    <div class="reveal tool-intro"><p>Read the questions, copy the two prompts, and run it now in Claude or ChatGPT. Prefer to keep it or print it? Download the PDF at the bottom.</p></div>
+
+    <!-- PASS 01 — DISCOVERY -->
+    <div class="tool-block reveal" id="discovery">
+      <div class="eyebrow">Pass 01 &middot; Discovery</div>
+      <h3 class="tool-h">Answer these in your own words.</h3>
+      <p class="tool-sub">Twenty questions across seven categories. Each has a short example so you can see the depth that works. Write your answers wherever you like, then paste them under the Synthesis prompt below.</p>
+
+      <div class="disc-cat">
+        <div class="disc-cat-h"><span class="disc-cat-n">Category 01</span><span class="disc-cat-t">Origin &amp; Motivation</span></div>
+        <div class="qa"><div class="qa-n">01</div><div class="qa-t">Why did you start this firm? Not the version you tell clients, the real one. What were you reacting to, or running from?<span class="qa-ex"><b>e.g.</b>I watched my dad get sold products that paid the advisor and not him. I wanted someone in the room who was actually on the client's side.</span></div></div>
+        <div class="qa"><div class="qa-n">02</div><div class="qa-t">What part of this work would you still do if it paid half as much? That is the signal under the noise.<span class="qa-ex"><b>e.g.</b>The first planning meeting, when someone finally sees their whole picture on one page and exhales. I would do that for free.</span></div></div>
+        <div class="qa"><div class="qa-n">03</div><div class="qa-t">What was the moment you realized you were better at this than the people around you?<span class="qa-ex"><b>e.g.</b>A client's CPA and attorney were arguing in circles, and I was the one who reframed the actual question. The room went quiet.</span></div></div>
+      </div>
+
+      <div class="disc-cat">
+        <div class="disc-cat-h"><span class="disc-cat-n">Category 02</span><span class="disc-cat-t">The Business Today</span></div>
+        <div class="qa"><div class="qa-n">04</div><div class="qa-t">Describe the business as it actually is right now in three sentences. Revenue, client count, what works and what doesn't. No aspiration.<span class="qa-ex"><b>e.g.</b>About 60 households, fee-only, healthy referrals, zero marketing. I am the bottleneck on almost everything.</span></div></div>
+        <div class="qa"><div class="qa-n">05</div><div class="qa-t">If a client left you tomorrow, what would the real reason be? Name the actual weakness, not the polite one.<span class="qa-ex"><b>e.g.</b>Slow response time. I go deep on the plan, then disappear for two weeks, and they feel forgotten between meetings.</span></div></div>
+        <div class="qa"><div class="qa-n">06</div><div class="qa-t">What work pays you the most, and what do you most want to be known for? Are they the same thing yet?<span class="qa-ex"><b>e.g.</b>Insurance reviews pay the bills. I want to be known for equity-comp planning for tech employees. Not the same yet.</span></div></div>
+      </div>
+
+      <div class="disc-cat">
+        <div class="disc-cat-h"><span class="disc-cat-n">Category 03</span><span class="disc-cat-t">The Client &amp; ICP</span></div>
+        <div class="qa"><div class="qa-n">07</div><div class="qa-t">Describe the single best client you have, the one you would clone. Their situation, and what you did that mattered.<span class="qa-ex"><b>e.g.</b>Mid-career engineer at a pre-IPO startup with equity she didn't understand. I built a tax and sell plan before the lockup and saved her a six-figure mistake.</span></div></div>
+        <div class="qa"><div class="qa-n">08</div><div class="qa-t">Who do you quietly turn away, or wish you could? Naming who you are not for is half of positioning.<span class="qa-ex"><b>e.g.</b>Day-traders who want me to validate their stock picks. We are not a fit, and I stopped pretending otherwise.</span></div></div>
+        <div class="qa"><div class="qa-n">09</div><div class="qa-t">What does your ideal client believe about money, or about advisors, that most people don't?<span class="qa-ex"><b>e.g.</b>That speed beats perfect optimization. They would rather make a good decision this week than a flawless one in three months.</span></div></div>
+      </div>
+
+      <div class="disc-cat">
+        <div class="disc-cat-h"><span class="disc-cat-n">Category 04</span><span class="disc-cat-t">The Process</span></div>
+        <div class="qa"><div class="qa-n">10</div><div class="qa-t">Walk through your first 90 days with a new client, step by step. Where do they first say 'nobody has ever done that'?<span class="qa-ex"><b>e.g.</b>Day one I rebuild their whole balance sheet live on screen. Most have never seen everything in one place. That is the moment.</span></div></div>
+        <div class="qa"><div class="qa-n">11</div><div class="qa-t">What part of your process do you do differently from how you were trained? That deviation is where your real method lives.<span class="qa-ex"><b>e.g.</b>I was trained to open with a risk-tolerance questionnaire. I throw it out and start with their calendar and their fears.</span></div></div>
+        <div class="qa"><div class="qa-n">12</div><div class="qa-t">What do you refuse to do that is standard in your industry? The refusal is often the position.<span class="qa-ex"><b>e.g.</b>I will not sell a product I would not own myself, and I will not keep a client who talks over their spouse in meetings.</span></div></div>
+      </div>
+
+      <div class="disc-cat">
+        <div class="disc-cat-h"><span class="disc-cat-n">Category 05</span><span class="disc-cat-t">Competition &amp; Differentiation</span></div>
+        <div class="qa"><div class="qa-n">13</div><div class="qa-t">When a prospect doesn't choose you, what do they choose instead? Doing nothing, a robo, their CPA, a friend who's good with money?<span class="qa-ex"><b>e.g.</b>Usually doing nothing, or a big-box firm with a name they recognize. Rarely another independent like me.</span></div></div>
+        <div class="qa"><div class="qa-n">14</div><div class="qa-t">What can you say about your work that a competitor down the street could not say without lying?<span class="qa-ex"><b>e.g.</b>I have personally been through an IPO and a layoff. I am not theorizing about equity comp. I have lived the windfall and the panic.</span></div></div>
+        <div class="qa"><div class="qa-n">15</div><div class="qa-t">What do you believe about this profession that would make a room of other advisors uncomfortable if you said it out loud?<span class="qa-ex"><b>e.g.</b>Most 'full financial plans' are 80-page binders nobody reads, built to justify a fee. I would rather hand someone three decisions.</span></div></div>
+      </div>
+
+      <div class="disc-cat">
+        <div class="disc-cat-h"><span class="disc-cat-n">Category 06</span><span class="disc-cat-t">The Vocabulary</span></div>
+        <div class="qa"><div class="qa-n">16</div><div class="qa-t">Write the exact phrases you use with clients that you would never put in a brochure, including the slightly unprofessional ones.<span class="qa-ex"><b>e.g.</b>'Let's not light money on fire.' 'That is a you-decision, not a math decision.' 'What is your sleep-at-night number?'</span></div></div>
+        <div class="qa"><div class="qa-n">17</div><div class="qa-t">What words do other advisors use that make you cringe, that you would never say?<span class="qa-ex"><b>e.g.</b>'Holistic.' 'Trusted partner.' 'Your financial journey.' If I hear myself reaching for them, I stop talking.</span></div></div>
+      </div>
+
+      <div class="disc-cat">
+        <div class="disc-cat-h"><span class="disc-cat-n">Category 07</span><span class="disc-cat-t">Aspiration &amp; Self-Critique</span></div>
+        <div class="qa"><div class="qa-n">18</div><div class="qa-t">Where do you want this firm in three years, and what would have to be true about how you are known for that to happen?<span class="qa-ex"><b>e.g.</b>Known as the equity-comp person for pre-IPO employees in my city. For that, I would have to say no to everyone else.</span></div></div>
+        <div class="qa"><div class="qa-n">19</div><div class="qa-t">What is the gap you already see in your own positioning, the part that is fuzzy, borrowed, or trying to please everyone?<span class="qa-ex"><b>e.g.</b>My site says I serve 'individuals and families,' which means nothing. I am hiding, because picking a lane feels like losing the others.</span></div></div>
+        <div class="qa"><div class="qa-n">20</div><div class="qa-t">If you had to keep only the right 20% of your clients and release the rest, who would you keep, and what does that tell you?<span class="qa-ex"><b>e.g.</b>I would keep the tech employees with equity. The rest I keep out of fear, not fit. That is the answer, isn't it?</span></div></div>
+      </div>
+    </div>
+
+    <!-- THREE VISUAL EXERCISES -->
+    <div class="tool-block reveal">
+      <div class="eyebrow">This, Not That</div>
+      <h3 class="tool-h">Three visual exercises.</h3>
+      <p class="tool-sub">It is never about the object. It is about what the object means. Do these last, when your instincts are warm.</p>
+      <div class="vex">
+        <div class="vex-q">If my brand were a drink, it would be __________, not __________.</div>
+        <div class="vex-l"><b>What it surfaces</b>Taste level, occasion, price signal, and who is comfortable holding it.</div>
+        <div class="vex-l ex"><b>Worked example</b>Not a flashy energy drink. It is loud, synthetic, promises a jolt and leaves a crash. Closer to black coffee. Plain, daily, no garnish, the thing serious people actually run on.</div>
+        <div class="vex-l"><b>Now you</b>Write both, then say what each one signals. The 'not' carries as much meaning as the 'is.'</div>
+      </div>
+      <div class="vex">
+        <div class="vex-q">If my brand were a car, it would be __________, not __________.</div>
+        <div class="vex-l"><b>What it surfaces</b>Aspirational identity. What the owner is telling the world about themselves.</div>
+        <div class="vex-l ex"><b>Worked example</b>Not a Lamborghini. It shouts, it is bought to be seen, it values attention over substance. Closer to an old Land Cruiser. Understated, over-built, the choice of someone who knows what they are doing and does not need you to notice.</div>
+        <div class="vex-l"><b>Now you</b>Pick the 'not' first. Ask why you would reject it. What is it about that car that, if it were your brand, would feel wrong? That answer is your real position.</div>
+      </div>
+      <div class="vex">
+        <div class="vex-q">If my brand were a place, it would be __________, not __________.</div>
+        <div class="vex-l"><b>What it surfaces</b>Atmosphere. The room a client feels they have walked into when they work with you.</div>
+        <div class="vex-l ex"><b>Worked example</b>Not a marble bank lobby. Cold, formal, built to make you feel small and grateful. Closer to a serious kitchen at prep time. Focused, a little intense, everyone knows their job, you are welcome but not the center of attention.</div>
+        <div class="vex-l"><b>Now you</b>Describe the feeling of each place, not the furniture. What does a client carry out the door?</div>
+      </div>
+    </div>
+
+    <!-- PASS 02 & 03 — THE PROMPTS -->
+    <div class="tool-block reveal" id="prompts">
+      <div class="eyebrow">Pass 02 &amp; 03 &middot; The prompts</div>
+      <h3 class="tool-h">Copy these. Run them in order.</h3>
+      <p class="tool-sub">Open a fresh chat. Paste the Synthesis prompt, then paste your Discovery answers beneath it. When the candidates come back, paste the Pressure Test prompt as your next message in the same chat. One foundation, two prompts.</p>
+
+      <div class="promptbox">
+        <div class="promptbox-bar"><span>Pass 02 &middot; Synthesis</span><button class="copybtn" type="button" onclick="copyPrompt(this)">Copy</button></div>
+        <pre>&lt;role&gt;
+You are a positioning strategist trained in the methodologies of Marty Neumeier and April Dunford. You are specifically trained to overcome Solomon's Paradox, the cognitive bias where people reason poorly about their own situations. Treat the user as a third party. Look at their evidence, not at them.
+&lt;/role&gt;
+
+&lt;context&gt;
+The user has completed a 20-question Discovery workbook plus three visual analogies. They will paste it after this prompt. Your job is to synthesize their answers into candidate positioning statements grounded in their actual evidence.
+&lt;/context&gt;
+
+&lt;method&gt;
+Run their Discovery through five positioning frameworks:
+FRAMEWORK 01. Onlyness Statement (Marty Neumeier): "My firm is the only ___ that ___ for ___ who ___ in/at ___." Force specificity in every slot.
+FRAMEWORK 02. Competitive Alternatives (April Dunford): What do prospects actually compare them to? What unique value do they deliver versus each alternative?
+FRAMEWORK 03. Mechanism of Value: What specific process, framework, or capability does the user deploy that competitors don't or can't? A real mechanism, drawn from their answers.
+FRAMEWORK 04. Category Move: Is the user better than competitors, or in a different category? If different, what is the new category?
+FRAMEWORK 05. Statement Form: For each candidate, produce a single declarative sentence under 15 words. Fact, not claim. No banned words.
+Cross-reference the visual analogies as aesthetic checks.
+&lt;/method&gt;
+
+&lt;output&gt;
+Five to seven candidate positioning statements. For each: the statement (under 15 words), which framework produced it, the specific evidence from their Discovery that supports it (cite question numbers), why it could fail, and an aesthetic alignment check versus their visual analogies. End with the two strongest, and why. Do not pick a winner yet.
+&lt;/output&gt;
+
+&lt;self_check&gt;
+Am I writing about this firm, or about advisors in general? If anything could be pasted into another advisor's analysis without changing meaning, delete it. Check for banned words and regenerate if any appear.
+&lt;/self_check&gt;</pre>
+      </div>
+
+      <div class="promptbox">
+        <div class="promptbox-bar"><span>Pass 03 &middot; Pressure Test</span><button class="copybtn" type="button" onclick="copyPrompt(this)">Copy</button></div>
+        <pre>&lt;role&gt;
+You are now the toughest possible reviewer. Your job is to break every candidate from the previous pass before the user takes it to market. Do not soften failures to spare the user's feelings.
+&lt;/role&gt;
+
+&lt;context&gt;
+You have 5 to 7 candidate positioning statements from Pass 02. Run each one through six failure modes. Score honestly. Recommend kills.
+&lt;/context&gt;
+
+&lt;method&gt;
+TEST 01. FACT OR CLAIM: A fact is provable; a claim is assertable. Score 1 to 10. Below 6 fails.
+TEST 02. THE OTHER ADVISOR: Could a competitor copy it and still be telling the truth? If yes, it is a category description, not theirs.
+TEST 03. SO WHAT: Read it aloud, then ask "so what?" If it needs more explanation to land, it is incomplete.
+TEST 04. DINNER PARTY: Could a non-advisor friend explain it back in their own words? Jargon loses the room.
+TEST 05. BANNED WORDS: help, partner, trusted, boutique, personalized, dedicated, comprehensive, holistic, tailored, customized, white-glove, concierge. Replace or kill.
+TEST 06. TWELVE-MONTH DURABILITY: Still true and differentiated a year out? Position for the persistent reality.
+&lt;/method&gt;
+
+&lt;output&gt;
+For each candidate: the original statement, a score on each of the six tests, the verdict (Ship it, Iterate, or Kill), and for the top two survivors a rewritten final form. End with which one to commit to, and why.
+&lt;/output&gt;
+
+&lt;self_check&gt;
+You are here to find what survives stress. If a candidate fails three or more tests, it dies. Do not soften failures.
+&lt;/self_check&gt;</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD / KEEP -->
+  <section class="final" id="get">
+    <div class="wrap reveal">
+      <div class="eyebrow">Keep it</div>
+      <h2>Want it to keep, or to print? <em>Take the whole thing with you.</em></h2>
+      <div class="btns">
+        <a href="/The_Positioning_Blueprint.pdf" download class="btn btn-solid">Download the PDF <span class="ar" aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="micro">18 pages &middot; the full method, the questions, and both prompts &middot; free</div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-copy">&copy; 2026 Keir Dillon. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/keirdillon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://instagram.com/keirdillon" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://dillonagency.co" target="_blank" rel="noopener noreferrer">Dillon Agency</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+  // Progressive scroll reveal for .pb .reveal elements
+  (function () {
+    var els = document.querySelectorAll('.pb .reveal');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (e) { e.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+  </script>
+</body>
+</html>
