@@ -121,8 +121,8 @@
     .pb .lede {
       display: block;
       min-height: 0;
-      padding-top: clamp(122px, 14vw, 152px);
-      padding-bottom: clamp(80px, 10vw, 120px);
+      padding-top: clamp(100px, 10vw, 120px);
+      padding-bottom: clamp(52px, 6vw, 76px);
     }
     .pb .lede-grid {
       display: grid;
@@ -610,6 +610,36 @@
 
   <div class="stitch"></div>
 
+  <!-- HOW IT WORKS -->
+  <section class="wrap">
+    <div class="reveal sec-head">
+      <div class="eyebrow">How it works</div>
+      <h2>Three steps. <em>About ten minutes.</em></h2>
+    </div>
+    <div class="seam seam-3 reveal" style="margin-top:40px">
+      <div class="cell">
+        <div class="c-n">1</div>
+        <div class="c-min">Gather</div>
+        <p>Pull your name, your Google results, and your LinkedIn, Instagram, and website copy. The checklist below makes it quick.</p>
+      </div>
+      <div class="cell">
+        <div class="c-n">2</div>
+        <div class="c-min">Run it in Claude</div>
+        <p>Paste the prompt, drop in your surfaces, and run it. It reads your presence and scores it right in the chat.</p>
+      </div>
+      <div class="cell">
+        <div class="c-n">3</div>
+        <div class="c-min">Get your report</div>
+        <p>A scored audit, the single highest leverage fix, a branded report you can download, and a plain black and white version for printing.</p>
+      </div>
+    </div>
+    <div class="btns">
+      <a href="#audit" class="btn btn-solid">Go to the prompt <span class="ar" aria-hidden="true">&rarr;</span></a>
+    </div>
+  </section>
+
+  <div class="stitch"></div>
+
   <!-- 01 THE PREMISE -->
   <section class="wrap">
     <div class="split">
@@ -760,36 +790,36 @@
     </div>
     <div class="rule" style="margin-top:30px"></div>
     <div class="tool-block reveal">
-      <p class="tool-sub">Gather your surfaces with the checklist above, then paste everything into <strong style="color:var(--deep);font-weight:500">Claude</strong> (preferred) or your LLM of choice. Pass 01 scores you and names the one fix. Pass 02 rewrites your weakest surface. Run it in the same conversation so the model keeps the context.</p>
+      <p class="tool-sub">Gather your surfaces with the checklist above, then paste everything into <strong style="color:var(--deep);font-weight:500">Claude</strong> (preferred) or your LLM of choice. Pass 01 scores you, names the single highest leverage fix, and builds you a branded report to download. Pass 02 rewrites your weakest surface. Run it in the same conversation so the model keeps the context.</p>
 
       <div class="promptbox">
         <div class="promptbox-bar"><span>Prompt 01 &middot; The Audit</span><button class="copybtn" type="button" onclick="copyPrompt(this)">Copy</button></div>
-        <pre>You are a brand and presence auditor for financial advisors. You understand that for advisors trust is the deciding factor - especially moving up market - and that a referred prospect quietly verifies an advisor across Google, LinkedIn, Instagram and their website before the first call. You also understand U.S. compliance: under the SEC Marketing Rule, testimonials and endorsements are heavily restricted, so "proof" must never depend on client quotes about advisory services or performance.
+        <pre>You are a brand and presence auditor for financial advisors. For advisors, trust is the deciding factor, especially moving up market, and a referred prospect quietly verifies you across Google, LinkedIn, Instagram, and your website before the first call. You also understand U.S. compliance: under the SEC Marketing Rule, testimonials and endorsements are heavily restricted, so "proof" must never depend on client quotes about advisory services or performance. Be direct. I would rather hear it now than lose the client later.
 
 Here is everything a prospect would find when they look me up:
   - MY NAME:
   - WHAT I WANT TO BE KNOWN FOR (the reason someone refers me):
   - WHO I'M TRYING TO REACH (and whether I'm moving up market):
   - GOOGLE (titles/snippets for my name + "financial advisor"):
-  - LINKEDIN (paste my headline + About):
-  - INSTAGRAM (paste my bio + describe my last 6 posts):
-  - WEBSITE (paste my homepage headline + opening copy, or "none"):
+  - LINKEDIN (my headline + About):
+  - INSTAGRAM (my bio + a description of my last 6 posts):
+  - WEBSITE (my homepage headline + opening copy, or "none"):
 
-Audit me across five dimensions. Score each 1-10 with a one-line reason:
+STEP 1. Audit me in writing, here in the chat, first. Score each dimension 1 to 10 with a one-line reason:
   1. COHERENCE         - same person on every surface?
   2. DIFFERENTIATION   - swap my name for any advisor's. Still true? Then I fail.
   3. NARRATIVE CONTROL - do I own page one, or does the algorithm?
-  4. PROOF (COMPLIANT) - evidence without testimonials/performance.
-       Flag anything resembling a client endorsement as a risk to remove.
-  5. THE SNIFF TEST    - after 4 minutes, would they be more confident or less?
+  4. PROOF (COMPLIANT) - evidence without testimonials or performance. Flag anything resembling a client endorsement as a risk to remove.
+  5. THE SNIFF TEST    - after 4 minutes, more confident or less?
+Then give me THE VERDICT (one paragraph, do I survive today?), THE ONE FIX (the single highest-leverage change, not a list), and COMPLIANCE FLAGS (you are not my compliance team, so flag it and tell me to confirm).
 
-Then give me:
-  - THE VERDICT: one paragraph. Do I survive the sniff test today?
-  - THE ONE FIX: the single highest-leverage change. Not a list.
-  - COMPLIANCE FLAGS: anything that could trip the SEC Marketing Rule.
-    (You are not my compliance team - flag it and tell me to confirm.)
+STEP 2. Then build a branded report as a single downloadable HTML file titled "The Sniff Test," using only what is in the audit above. Include my name and the date, a composite score out of 50, the verdict, the five dimensions each with its score, a thin score bar, the one-line reason and a Next Step, a dark One Fix block, and the compliance flags with a short disclaimer. Style it: parchment background #FAF8F0, near-black ink #211D18, cognac accent #8C6840, display font Cormorant Garamond, body font Inter, square corners, hairline rules, small-caps labels, no em dashes. Add an @page Letter rule, print-color-adjust exact, break-inside avoid on each block, and a fixed "Save as PDF" button that prints cleanly and hides on print.
 
-Be direct. I'd rather hear it now than lose the client later.</pre>
+STEP 3. If you can run code, also render that HTML to a true PDF with the fonts embedded and give it to me as a download, so the file looks identical for everyone.
+
+STEP 4. Also give me a plain, black-and-white, text-only version of the whole audit, no color or graphics, that prints on any printer and is easy to forward to a compliance reviewer.
+
+If you cannot create files, do all of STEP 1 as text, then paste the report HTML in a code block so I can save it myself, with the black-and-white version below it.</pre>
         <div class="promptbox-note">Tip: screenshot your Google results page and paste the image in too. The model can read it.</div>
       </div>
 
