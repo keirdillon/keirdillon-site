@@ -515,6 +515,12 @@
       font-weight: 600;
     }
 
+    /* clickable outcome card (wraps a .out in an anchor without breaking the grid) */
+    .pb .out-grid > a.out-link { display: block; color: inherit; text-decoration: none; }
+    .pb .out-grid > a.out-link:focus-visible { outline: 2px solid var(--cognac); outline-offset: -2px; }
+    .pb .st-cta-arrow { display: inline-block; margin-left: 4px; transition: transform 0.2s ease; }
+    .pb .out-link:hover .st-cta-arrow { transform: translateX(4px); }
+
     .pb .st-keyword {
       display: inline-block;
       font-family: ui-monospace, Menlo, Consolas, monospace;
@@ -821,11 +827,14 @@ Give me two versions - one tighter, one warmer. Then tell me which you'd pick an
     </div>
 
     <div class="out-grid reveal">
-      <div class="out">
-        <div class="o-step">First</div>
-        <div class="o-t">The Positioning Blueprint</div>
-        <p>Pick the lane. Pressure-test it until it holds. The three-pass system that turns "I help people with their money" into a position only you can own.</p>
-      </div>
+      <a class="out-link" href="/resources/positioning-blueprint">
+        <div class="out">
+          <div class="o-step">First</div>
+          <div class="o-t">The Positioning Blueprint</div>
+          <p>Pick the lane. Pressure-test it until it holds. The three-pass system that turns "I help people with their money" into a position only you can own.</p>
+          <span class="st-here">Get the blueprint <span class="st-cta-arrow" aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
       <div class="out">
         <div class="o-step">Then</div>
         <div class="o-t">The Sniff Test</div>
