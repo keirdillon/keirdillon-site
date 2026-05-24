@@ -113,13 +113,6 @@
       transition: transform 0.3s;
     }
     .res-page .res-card:hover .res-card-cta svg { transform: translateX(4px); }
-
-    /* Non-link "Coming soon" lanes. Same shell, no hover, muted CTA. */
-    .res-page .res-card-soon { cursor: default; }
-    .res-page .res-card-soon:hover { background: var(--ivory); }
-    .res-page .res-card-soon:hover::before { transform: scaleX(0); }
-    .res-page .res-card-soon .res-tag { color: var(--stone); }
-    .res-page .res-card-soon .res-card-cta { color: var(--stone); }
   </style>
 
   <!-- Google tag (gtag.js) -->
@@ -177,26 +170,35 @@
         </span>
       </a>
 
-      <div class="res-card res-card-soon" aria-disabled="true">
-        <span class="res-tag">Coming soon</span>
+      <a class="res-card" href="/resources/audit/the-firm">
+        <span class="res-tag">Live / Tool</span>
         <span class="res-card-title">The Firm</span>
         <span class="res-card-desc">For RIAs and advisory firms auditing presence at the firm level.</span>
-        <span class="res-card-cta">Coming soon</span>
-      </div>
+        <span class="res-card-cta">
+          Open
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </a>
 
-      <div class="res-card res-card-soon" aria-disabled="true">
-        <span class="res-tag">Coming soon</span>
+      <a class="res-card" href="/resources/audit/financial-leadership">
+        <span class="res-tag">Live / Tool</span>
         <span class="res-card-title">Financial Leadership</span>
         <span class="res-card-desc">For founders and executives who lead in the industry without personally advising clients.</span>
-        <span class="res-card-cta">Coming soon</span>
-      </div>
+        <span class="res-card-cta">
+          Open
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </a>
 
-      <div class="res-card res-card-soon" aria-disabled="true">
-        <span class="res-tag">Coming soon</span>
+      <a class="res-card" href="/resources/audit/outside-financial-services">
+        <span class="res-tag">Live / Tool</span>
         <span class="res-card-title">Outside Financial Services</span>
         <span class="res-card-desc">For founders and professionals in any other field who still get looked up first.</span>
-        <span class="res-card-cta">Coming soon</span>
-      </div>
+        <span class="res-card-cta">
+          Open
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </a>
 
     </div>
   </section>

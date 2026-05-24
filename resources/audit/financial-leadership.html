@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sniff Test for Financial Leaders | Keir Dillon</title>
+  <meta name="description" content="A presence audit for financial leaders. What a partner, recruit, or reporter finds when they look you up, and whether it reads like authority.">
+  <meta name="theme-color" content="#FAF8F0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22%238C6840%22/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <noscript>
+    <style>
+      .fade-in { opacity: 1 !important; transform: none !important; }
+      @media (max-width: 900px) {
+        .nav-links { display: flex !important; flex-wrap: wrap; gap: 14px; position: static !important; padding: 0 !important; border: 0 !important; background: transparent !important; }
+        .nav-toggle { display: none !important; }
+      }
+    </style>
+  </noscript>
+
+  <link rel="canonical" href="https://keirdillon.com/resources/audit/financial-leadership">
+  <meta property="og:title" content="The Sniff Test for Financial Leaders | Keir Dillon">
+  <meta property="og:description" content="A presence audit for financial leaders. What a partner, recruit, or reporter finds when they look you up, and whether it reads like authority.">
+  <meta property="og:url" content="https://keirdillon.com/resources/audit/financial-leadership">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Sniff Test for Financial Leaders | Keir Dillon">
+  <meta name="twitter:description" content="A presence audit for financial leaders. What a partner, recruit, or reporter finds when they look you up.">
+
+  <!-- The Sniff Test - page-scoped styles.
+       The .pb prefix is the resource-page design system established by
+       positioning-blueprint.html. Cloning it here keeps both resource pages
+       structurally identical. The small block at the bottom adds only the
+       patterns this page specifically needs (numbered dimensions, callout
+       cards, checklist, keyword chip). -->
+  <style>
+    /* .wrap sets horizontal padding only; vertical section padding lives on
+       .pb section, so the two never collide on the `padding` shorthand. */
+    .pb .wrap { max-width: var(--max-w); margin: 0 auto; padding-left: var(--pad); padding-right: var(--pad); }
+
+    .pb .eyebrow {
+      font-family: var(--body);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cognac);
+      margin-bottom: 16px;
+    }
+
+    .pb .rule { width: 62px; height: 2px; background: var(--cognac); margin: 0 0 26px; }
+
+    .pb h1, .pb h2, .pb h3 {
+      font-family: var(--display);
+      font-weight: 400;
+      color: var(--deep);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    .pb h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.12; }
+    .pb h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.2; }
+    .pb h1 em, .pb h2 em { font-style: italic; color: var(--cognac); }
+
+    .pb p {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--warm-gray);
+      max-width: 34em;
+      overflow-wrap: break-word;
+    }
+
+    /* buttons */
+    .pb .btns { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 36px; }
+    .pb .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border: 1px solid transparent;
+      transition: all 0.3s;
+      cursor: pointer;
+      max-width: 100%;
+    }
+    .pb .btn-solid { background: var(--deep); color: var(--ivory); border-color: var(--deep); }
+    .pb .btn-solid:hover { background: var(--charcoal); border-color: var(--charcoal); }
+    .pb .btn-ghost { background: transparent; color: var(--warm-gray); border-color: var(--sand); }
+    .pb .btn-ghost:hover { color: var(--deep); border-color: var(--cognac); background: var(--cream); }
+    .pb .btn .ar { font-family: var(--display); font-size: 1rem; line-height: 1; }
+    .pb .micro {
+      margin-top: 18px;
+      font-size: 0.78rem;
+      letter-spacing: 0.03em;
+      color: var(--stone);
+      font-weight: 400;
+    }
+
+    /* sections */
+    .pb section { padding-top: clamp(72px, 11vw, 134px); padding-bottom: clamp(72px, 11vw, 134px); }
+    .pb .sec-head { max-width: 20em; }
+    .pb .split {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: start;
+    }
+    .pb .split-head h2 { max-width: 12em; }
+    .pb .split-body p { max-width: 36em; }
+    .pb .split-body p + p { margin-top: 18px; }
+
+    /* hero */
+    .pb .lede {
+      display: block;
+      min-height: 0;
+      padding-top: clamp(100px, 10vw, 120px);
+      padding-bottom: clamp(52px, 6vw, 76px);
+    }
+    .pb .lede-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(36px, 5vw, 72px);
+      align-items: center;
+    }
+    .pb .lede h1 { margin-bottom: 24px; }
+    .pb .lede p { font-size: 1.05rem; }
+
+    /* document mockup */
+    .pb .doc {
+      background: var(--deep);
+      color: var(--cream);
+      padding: 44px 38px 30px;
+      border: 1px solid var(--deep);
+      position: relative;
+      aspect-ratio: 8.5 / 11;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 380px;
+      margin-inline: auto;
+    }
+    .pb .doc .d-eyebrow {
+      font-size: 0.6rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--stone);
+      font-weight: 500;
+    }
+    .pb .doc .d-rule { width: 48px; height: 2px; background: var(--cognac); margin-top: 14px; }
+    .pb .doc .d-kicker {
+      font-size: 0.68rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 18px;
+    }
+    .pb .doc .d-title {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+      line-height: 1.02;
+      color: var(--cream);
+    }
+    .pb .doc .d-title em { font-style: italic; color: var(--tan); }
+    .pb .doc .d-sub {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 0.88rem;
+      line-height: 1.4;
+      color: var(--stone);
+      margin-top: 18px;
+    }
+    .pb .doc .d-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+    .pb .doc .d-foot .wm {
+      font-family: var(--body);
+      color: var(--cream);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+    }
+    .pb .doc-tag {
+      position: absolute;
+      top: -13px;
+      right: 24px;
+      background: var(--cognac);
+      color: var(--ivory);
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 6px 12px;
+    }
+
+    /* panel-seam grid */
+    .pb .seam {
+      display: grid;
+      gap: 1px;
+      background: var(--parchment);
+      border: 1px solid var(--parchment);
+      margin-top: 56px;
+    }
+    .pb .seam-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .pb .cell { background: var(--ivory); padding: 44px 36px; transition: background 0.3s; }
+    .pb .cell:hover { background: var(--cream); }
+    .pb .cell .c-n {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 2.6rem;
+      color: var(--cognac);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .pb .cell .c-min {
+      font-family: var(--body);
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--stone);
+      font-weight: 500;
+      margin-bottom: 9px;
+    }
+    .pb .cell p { font-size: 0.9rem; line-height: 1.7; color: var(--warm-gray); }
+
+    /* flow note (pull-quote) */
+    .pb .flow-note {
+      margin-top: 26px;
+      border-left: 2px solid var(--cognac);
+      padding: 6px 0 6px 20px;
+      max-width: 36em;
+    }
+    .pb .flow-note p {
+      font-family: var(--display);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--deep);
+      max-width: none;
+    }
+
+    /* dark bands */
+    .pb .band { background: var(--deep); color: var(--cream); }
+    .pb .band .eyebrow { color: var(--tan); }
+    .pb .band h2 { color: var(--cream); }
+    .pb .band p { color: var(--stone); }
+
+    /* outcome / ladder grid */
+    .pb .out-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--parchment);
+      border: 1px solid var(--parchment);
+      margin-top: 56px;
+    }
+    .pb .out { background: var(--ivory); padding: 36px 32px; transition: background 0.3s; }
+    .pb .out:hover { background: var(--cream); }
+    .pb .out .o-t {
+      font-family: var(--display);
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--deep);
+      margin-bottom: 8px;
+    }
+    .pb .out p { font-size: 0.9rem; color: var(--warm-gray); max-width: none; }
+    .pb .out .o-step {
+      font-family: var(--body);
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cognac);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    /* prompt blocks (same pattern as positioning-blueprint.html) */
+    .pb .tool-block { margin-top: clamp(60px, 8vw, 104px); }
+    .pb .tool-h {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      color: var(--deep);
+      line-height: 1.1;
+      margin: 6px 0 14px;
+    }
+    .pb .tool-sub { max-width: 38em; margin-bottom: 30px; }
+    .pb .promptbox { margin-top: 22px; border: 1px solid var(--parchment); }
+    .pb .promptbox-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--deep);
+      padding: 9px 14px;
+      gap: 12px;
+    }
+    .pb .promptbox-bar span {
+      font-family: var(--body);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream);
+      font-weight: 500;
+    }
+    .pb .copybtn {
+      font-family: var(--body);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--deep);
+      background: var(--cream);
+      border: 1px solid var(--cream);
+      padding: 7px 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+    .pb .copybtn:hover { background: var(--ivory); border-color: var(--ivory); }
+    .pb .promptbox pre {
+      margin: 0;
+      padding: 18px 20px;
+      background: var(--cream);
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      font-size: 0.72rem;
+      line-height: 1.6;
+      color: var(--deep);
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .pb .promptbox-note {
+      padding: 12px 20px 16px;
+      background: var(--cream);
+      border-top: 1px solid var(--parchment);
+      font-size: 0.78rem;
+      color: var(--stone);
+      line-height: 1.5;
+    }
+
+    /* final CTA */
+    .pb .final { background: var(--deep); color: var(--cream); }
+    .pb .final .eyebrow { color: var(--tan); }
+    .pb .final h2 { color: var(--cream); max-width: 14em; margin-bottom: 8px; }
+    .pb .final p { color: var(--stone); }
+    .pb .final .btn-solid { background: var(--cream); color: var(--deep); border-color: var(--cream); }
+    .pb .final .btn-solid:hover { background: var(--ivory); border-color: var(--ivory); }
+    .pb .final .micro { color: var(--stone); }
+
+    /* scroll reveal */
+    .js .pb .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .js .pb .reveal.in { opacity: 1; transform: none; }
+
+    /* responsive */
+    @media (max-width: 860px) {
+      .pb .lede-grid { grid-template-columns: 1fr; gap: 48px; }
+      .pb .seam-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 820px) {
+      .pb .split { grid-template-columns: 1fr; gap: 30px; }
+    }
+    @media (max-width: 640px) {
+      .pb .out-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .js .pb .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ============================================================
+       Sniff Test page-only additions.
+       Four patterns this page needs that PB does not:
+       numbered dimension list, callout cards, capture checklist,
+       AUDIT keyword chip.
+       ============================================================ */
+    .pb .seam-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .pb .st-panel-h {
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--deep);
+      font-size: 1.4rem;
+      line-height: 1.15;
+      margin: 4px 0 12px;
+    }
+
+    .pb .st-dims { margin-top: 8px; }
+    .pb .st-dim {
+      display: grid;
+      grid-template-columns: 44px 220px 1fr;
+      gap: 24px;
+      padding: 24px 0;
+      border-top: 1px solid var(--parchment);
+      align-items: baseline;
+    }
+    .pb .st-dim:last-child { border-bottom: 1px solid var(--parchment); }
+    .pb .st-dim-n {
+      font-family: var(--body);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      color: var(--cognac);
+    }
+    .pb .st-dim-t {
+      font-family: var(--display);
+      font-style: italic;
+      color: var(--deep);
+      font-size: 1.45rem;
+      line-height: 1.05;
+    }
+    .pb .st-dim-d {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--warm-gray);
+      max-width: none;
+    }
+    @media (max-width: 760px) {
+      .pb .st-dim { grid-template-columns: 40px 1fr; gap: 14px; }
+      .pb .st-dim-d { grid-column: 1 / -1; padding-left: 54px; margin-top: -6px; }
+    }
+
+    .pb .st-card {
+      background: var(--cream);
+      border: 1px solid var(--parchment);
+      border-left: 3px solid var(--signal-red);
+      padding: 28px 32px;
+      margin-top: 28px;
+    }
+    .pb .st-card.cognac { border-left-color: var(--cognac); }
+    .pb .st-card-label {
+      font-family: var(--body);
+      font-size: 0.66rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--signal-red);
+      font-weight: 600;
+    }
+    .pb .st-card.cognac .st-card-label { color: var(--cognac); }
+    .pb .st-card h4 {
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--deep);
+      font-size: 1.5rem;
+      line-height: 1.2;
+      margin: 8px 0 10px;
+    }
+    .pb .st-card p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--warm-gray);
+      max-width: 60em;
+    }
+    .pb .st-card .st-muted { color: var(--stone); }
+
+    .pb .st-checklist { margin-top: 6px; }
+    .pb .st-check {
+      display: flex;
+      gap: 16px;
+      padding: 18px 0;
+      border-top: 1px solid var(--parchment);
+      cursor: pointer;
+      align-items: flex-start;
+      transition: background 0.15s;
+    }
+    .pb .st-check:last-child { border-bottom: 1px solid var(--parchment); }
+    .pb .st-check:hover { background: var(--cream); }
+    .pb .st-box {
+      flex: 0 0 auto;
+      width: 18px;
+      height: 18px;
+      border: 1px solid var(--cognac);
+      margin-top: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+    }
+    .pb .st-check.on .st-box { background: var(--cognac); }
+    .pb .st-box svg { opacity: 0; transition: opacity 0.15s; }
+    .pb .st-check.on .st-box svg { opacity: 1; }
+    .pb .st-check-t {
+      font-family: var(--body);
+      font-weight: 500;
+      color: var(--deep);
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    .pb .st-check-s {
+      font-size: 0.88rem;
+      color: var(--warm-gray);
+      margin-top: 4px;
+      line-height: 1.55;
+    }
+
+    .pb .st-here {
+      display: inline-block;
+      margin-top: 14px;
+      font-family: var(--body);
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cognac);
+      font-weight: 600;
+    }
+
+    /* clickable outcome card (wraps a .out in an anchor without breaking the grid) */
+    .pb .out-grid > a.out-link { display: block; color: inherit; text-decoration: none; }
+    .pb .out-grid > a.out-link:focus-visible { outline: 2px solid var(--cognac); outline-offset: -2px; }
+    .pb .st-cta-arrow { display: inline-block; margin-left: 4px; transition: transform 0.2s ease; }
+    .pb .out-link:hover .st-cta-arrow { transform: translateX(4px); }
+
+    .pb .st-keyword {
+      display: inline-block;
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      font-weight: 500;
+      color: var(--cream);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--cognac);
+      padding: 2px 12px;
+      letter-spacing: 0.1em;
+    }
+  </style>
+  <script>
+    document.documentElement.classList.add('js');
+    function copyPrompt(btn) {
+      var pre = btn.closest('.promptbox').querySelector('pre');
+      navigator.clipboard.writeText(pre.innerText).then(function () {
+        var o = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = o; }, 1600);
+      }).catch(function () { btn.textContent = 'Copy failed'; });
+    }
+    function toggleCheck(el) { el.classList.toggle('on'); }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-THTL2M1JL2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-THTL2M1JL2");
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="walnut-bar" aria-hidden="true"></div>
+
+  <nav aria-label="Primary">
+    <div class="nav-inner">
+      <a href="/" class="nav-mark">Keir <span>Dillon</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/story">Story</a></li>
+        <li><a href="/thinking">Thinking</a></li>
+        <li><a href="/resources" class="active">Resources</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main" class="pb">
+
+  <!-- HERO -->
+  <section class="lede wrap">
+    <div class="lede-grid">
+      <div class="reveal">
+        <div class="eyebrow">Presence audit &middot; For financial leaders</div>
+        <h1>The Sniff Test. <em>What a partner, recruit, or reporter finds.</em></h1>
+        <p>Before anyone partners with you, joins you, or puts you on a stage, they look you up. This is what they find, and whether it reads like authority.</p>
+        <div class="btns">
+          <a href="#audit" class="btn btn-solid">Start the audit <span class="ar" aria-hidden="true">&rarr;</span></a>
+          <a href="/resources/audit/The_Sniff_Test_Leadership.pdf" download class="btn btn-ghost">Download the PDF</a>
+        </div>
+        <div class="micro">Companion to The Positioning Blueprint. Runs in Claude or ChatGPT.</div>
+      </div>
+      <div class="reveal">
+        <div class="doc">
+          <span class="doc-tag">Free &middot; PDF</span>
+          <div>
+            <div class="d-eyebrow">For financial leaders</div>
+            <div class="d-rule"></div>
+          </div>
+          <div>
+            <div class="d-kicker">Presence Audit &middot; Vol. 01</div>
+            <div class="d-title">The Sniff<br><em>Test</em></div>
+            <div class="d-sub">What a partner, recruit, or reporter finds.</div>
+          </div>
+          <div class="d-foot"><span class="wm">DI//ON</span><span>Keir Dillon</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch"></div>
+
+  <!-- HOW IT WORKS -->
+  <section class="wrap">
+    <div class="reveal sec-head">
+      <div class="eyebrow">How it works</div>
+      <h2>Three steps. <em>About ten minutes.</em></h2>
+    </div>
+    <div class="seam seam-3 reveal" style="margin-top:40px">
+      <div class="cell">
+        <div class="c-n">1</div>
+        <div class="c-min">Gather</div>
+        <p>Pull your name, your Google results, your LinkedIn and what you post, and your published work. The checklist below makes it quick.</p>
+      </div>
+      <div class="cell">
+        <div class="c-n">2</div>
+        <div class="c-min">Run it in Claude</div>
+        <p>Paste the prompt, drop in your surfaces, and run it. It reads your presence and scores it right in the chat.</p>
+      </div>
+      <div class="cell">
+        <div class="c-n">3</div>
+        <div class="c-min">Get your report</div>
+        <p>A scored audit, the single highest leverage fix, a branded report you can download, and a plain black and white version for printing.</p>
+      </div>
+    </div>
+    <div class="btns">
+      <a href="#audit" class="btn btn-solid">Go to the prompt <span class="ar" aria-hidden="true">&rarr;</span></a>
+    </div>
+  </section>
+
+  <div class="stitch"></div>
+
+  <!-- 01 THE PREMISE -->
+  <section class="wrap">
+    <div class="split">
+      <div class="reveal split-head">
+        <div class="eyebrow">The Premise</div>
+        <h2>You are looked up <em>before</em> you are backed.</h2>
+        <div class="rule" style="margin-top:30px"></div>
+      </div>
+      <div class="reveal split-body">
+        <p>Authority is the asset, and most of it gets decided before anyone commits. The people who can lift a leader, a partner weighing an alliance, a strong recruit deciding whether to join, a journalist deciding whether to quote you, an allocator sizing you up, all do the same thing first. They look you up. That search is the real audition.</p>
+        <p>An introduction gets you considered. It does not make you a voice. You were introduced for a reason, some version of the point of view you are known for. The person then checks whether your presence backs it up. If your work, your profile, and your bio all say the same confident thing, authority compounds. If page one is a thin bio, or your LinkedIn says one thing while your talks say another, the introduction quietly fades and you never know it happened.</p>
+        <div class="flow-note" style="margin-top:22px"><p>The bigger the platform, the better the partner, the more serious the recruit, the harder they look. They have more at stake, so they do more diligence, and they are far more sensitive to a leader whose presence does not match the reputation that preceded them.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch"></div>
+
+  <!-- 02 FOUR SURFACES -->
+  <section class="wrap">
+    <div class="reveal sec-head">
+      <div class="eyebrow">Where the sniff test happens</div>
+      <h2>Four surfaces. <em>One verdict.</em></h2>
+    </div>
+    <p class="reveal" style="margin-top:18px">It doesn't happen on a single page. It happens across four surfaces, in about four minutes, and the viewer blends them into one read on your authority. Most leaders have never looked at all four together as one system. The people deciding whether to back you always do.</p>
+    <div class="seam seam-4 reveal">
+      <div class="cell">
+        <div class="c-min">01 &middot; Google</div>
+        <div class="st-panel-h">The first move</div>
+        <p>They search your name. Page one either shows a body of work, or a thin bio and whatever the algorithm surfaced.</p>
+      </div>
+      <div class="cell">
+        <div class="c-min">02 &middot; LinkedIn</div>
+        <div class="st-panel-h">The authority read</div>
+        <p>Not just your headline. What you post and share is the clearest signal of whether you actually hold a point of view.</p>
+      </div>
+      <div class="cell">
+        <div class="c-min">03 &middot; Published Work</div>
+        <div class="st-panel-h">The third-party read</div>
+        <p>Where you have spoken, been quoted, or published. The proof that others already treat you as a voice.</p>
+      </div>
+      <div class="cell">
+        <div class="c-min">04 &middot; The Bio</div>
+        <div class="st-panel-h">The controlled read</div>
+        <p>Your leadership bio or personal page, the one surface you fully own, and the most common place a leader sounds generic.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch"></div>
+
+  <!-- 03 FIVE DIMENSIONS -->
+  <section class="wrap">
+    <div class="reveal sec-head">
+      <div class="eyebrow">What a coherent presence requires</div>
+      <h2>Five things have to be <em>true.</em></h2>
+    </div>
+    <div class="rule" style="margin-top:30px"></div>
+    <p class="reveal" style="margin-top:20px">Run every surface through these. The audit prompt below scores each one for you, but read them first. They are the standard the whole tool is built on.</p>
+
+    <div class="st-dims reveal" style="margin-top:36px">
+      <div class="st-dim">
+        <div class="st-dim-n">01</div>
+        <div class="st-dim-t">Coherence</div>
+        <div class="st-dim-d">The same leader shows up across the bio, the profile, the talks, and the writing. One point of view everywhere. The fastest way to fail is a confident bio attached to a silent or scattered profile.</div>
+      </div>
+      <div class="st-dim">
+        <div class="st-dim-n">02</div>
+        <div class="st-dim-t">Differentiation</div>
+        <div class="st-dim-d">Swap your name for any other industry leader's. Does it still read as true? If it does, you have no authority, just the vocabulary everyone uses. The point of view you are known for has to be unmistakable.</div>
+      </div>
+      <div class="st-dim">
+        <div class="st-dim-n">03</div>
+        <div class="st-dim-t">Narrative Control</div>
+        <div class="st-dim-d">For a leader this is the whole game. When someone searches you, does page one show your own work, your talks, your writing, your features, or a thin bio and whatever the algorithm surfaced? Authority is owning your own name.</div>
+      </div>
+      <div class="st-dim">
+        <div class="st-dim-n">04</div>
+        <div class="st-dim-t">Proof &middot; Authority</div>
+        <div class="st-dim-d">Visible evidence that you are a voice: published thinking, speaking, press, board and industry roles, a body of IP. A different kind of proof than a practice relies on. Read the note below.</div>
+      </div>
+    </div>
+
+    <div class="st-card reveal">
+      <div class="st-card-label">Compliance &middot; read this</div>
+      <h4>Authority is your proof, with one caution.</h4>
+      <p>For a leader, proof leans on what a client quote cannot: published thinking, speaking, press, and roles. Harder to fake than a testimonial. One caution: if you are a principal of an RIA, your personal content can count as the firm's marketing, which brings the SEC Marketing Rule back in. Keep client outcomes out of it and confirm with your firm. <span class="st-muted">(Not legal advice. Confirm anything client-facing with your firm's compliance team before it goes live.)</span></p>
+    </div>
+
+    <div class="st-dims reveal" style="margin-top:18px">
+      <div class="st-dim">
+        <div class="st-dim-n">05</div>
+        <div class="st-dim-t">The Sniff Test</div>
+        <div class="st-dim-d">The net effect. If someone was introduced to you as a leader worth knowing, and spent four minutes verifying, would they come away more convinced you are a voice worth backing, or less? This is the score that decides whether the platform, the partnership, or the recruit actually happens.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch"></div>
+
+  <!-- 04 CAPTURE CHECKLIST -->
+  <section class="wrap">
+    <div class="split">
+      <div class="reveal split-head">
+        <div class="eyebrow">Before you paste</div>
+        <h2>Gather your <em>surfaces.</em></h2>
+        <div class="rule" style="margin-top:30px"></div>
+        <p style="margin-top:22px">Five minutes of collection makes the audit ten times sharper.</p>
+      </div>
+      <div class="reveal split-body">
+        <div class="st-checklist">
+          <div class="st-check" onclick="toggleCheck(this)">
+            <div class="st-box"><svg width="11" height="11" viewBox="0 0 11 11" aria-hidden="true"><path d="M1 5.5 L4.2 8.5 L10 2" stroke="#FAF8F0" stroke-width="1.6" fill="none"/></svg></div>
+            <div><div class="st-check-t">Your name, exactly as it appears publicly</div><div class="st-check-s">Including any credential or title you actually use in public.</div></div>
+          </div>
+          <div class="st-check" onclick="toggleCheck(this)">
+            <div class="st-box"><svg width="11" height="11" viewBox="0 0 11 11" aria-hidden="true"><path d="M1 5.5 L4.2 8.5 L10 2" stroke="#FAF8F0" stroke-width="1.6" fill="none"/></svg></div>
+            <div><div class="st-check-t">Your Google results</div><div class="st-check-s">Search your name. Copy the top result titles, or screenshot page one.</div></div>
+          </div>
+          <div class="st-check" onclick="toggleCheck(this)">
+            <div class="st-box"><svg width="11" height="11" viewBox="0 0 11 11" aria-hidden="true"><path d="M1 5.5 L4.2 8.5 L10 2" stroke="#FAF8F0" stroke-width="1.6" fill="none"/></svg></div>
+            <div><div class="st-check-t">Your LinkedIn headline, About, and recent activity</div><div class="st-check-s">What you post and share, not just the profile. The activity is the authority signal.</div></div>
+          </div>
+          <div class="st-check" onclick="toggleCheck(this)">
+            <div class="st-box"><svg width="11" height="11" viewBox="0 0 11 11" aria-hidden="true"><path d="M1 5.5 L4.2 8.5 L10 2" stroke="#FAF8F0" stroke-width="1.6" fill="none"/></svg></div>
+            <div><div class="st-check-t">Where you have published or been featured</div><div class="st-check-s">Talks, articles, podcasts, press. If there is none, write "none." That is itself a finding.</div></div>
+          </div>
+          <div class="st-check" onclick="toggleCheck(this)">
+            <div class="st-box"><svg width="11" height="11" viewBox="0 0 11 11" aria-hidden="true"><path d="M1 5.5 L4.2 8.5 L10 2" stroke="#FAF8F0" stroke-width="1.6" fill="none"/></svg></div>
+            <div><div class="st-check-t">Your leadership bio or personal site</div><div class="st-check-s">The headline and the opening copy, pasted as written, or "none."</div></div>
+          </div>
+          <div class="st-check" onclick="toggleCheck(this)">
+            <div class="st-box"><svg width="11" height="11" viewBox="0 0 11 11" aria-hidden="true"><path d="M1 5.5 L4.2 8.5 L10 2" stroke="#FAF8F0" stroke-width="1.6" fill="none"/></svg></div>
+            <div><div class="st-check-t">The point of view you want to be known for</div><div class="st-check-s">In one sentence. The benchmark everything is measured against.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch"></div>
+
+  <!-- 05 THE PROMPTS -->
+  <section class="wrap" id="audit">
+    <div class="reveal sec-head">
+      <div class="eyebrow">The tool &middot; Two passes</div>
+      <h2>Run it on <em>yourself.</em></h2>
+    </div>
+    <div class="rule" style="margin-top:30px"></div>
+    <div class="tool-block reveal">
+      <p class="tool-sub">Gather your surfaces with the checklist above, then paste everything into <strong style="color:var(--deep);font-weight:500">Claude</strong> (preferred) or your LLM of choice. Pass 01 scores you, names the single highest leverage fix, and builds you a branded report to download. Pass 02 rewrites your weakest surface. Run it in the same conversation so the model keeps the context.</p>
+
+      <div class="promptbox">
+        <div class="promptbox-bar"><span>Prompt 01 &middot; The Audit</span><button class="copybtn" type="button" onclick="copyPrompt(this)">Copy</button></div>
+        <pre>You are a brand and presence auditor for leaders in financial services: founders, principals, and executives who set the direction of a firm but do not personally advise clients. For a leader, authority is the asset, and the people who matter, a potential partner, a recruit you want to attract, a journalist, an event, an acquirer, all verify you online before they commit. They check Google for your name, your LinkedIn profile and what you post, where you have spoken or been quoted, and your bio. You also understand U.S. compliance: if you are a principal of an RIA, your personal content can be treated as firm marketing, and the SEC Marketing Rule restricts testimonials and endorsements about advisory services. So flag anything that could read as a client endorsement and tell me to confirm with my firm, but recognize that peer recognition, press, and speaking are a different and available kind of proof. Be direct. I would rather hear it now than lose the partnership, the recruit, or the platform later.
+
+Here is everything someone would find when they look me up:
+  - MY NAME:
+  - WHAT I WANT TO BE KNOWN FOR (the point of view or expertise that makes me a voice):
+  - WHO I'M TRYING TO REACH (partners, recruits, press, peers, allocators):
+  - GOOGLE (titles/snippets for my name):
+  - LINKEDIN (my headline, About, and what I actually post):
+  - PUBLISHED WORK AND PRESS (talks, articles, podcasts, features, or "none"):
+  - BIO (my leadership bio or personal site copy, or "none"):
+
+STEP 1. Audit me in writing, here in the chat, first. Score each dimension 1 to 10 with a one-line reason:
+  1. COHERENCE         - the same leader across the bio, the profile, the talks, and the writing?
+  2. DIFFERENTIATION   - swap my name for any other industry leader's. Still true? Then I have no authority.
+  3. NARRATIVE CONTROL - do I own page one with my own work, or is it a thin bio and the algorithm?
+  4. PROOF (AUTHORITY) - published thinking, speaking, press, roles, and IP. Flag anything that reads as a client endorsement of advisory services as a risk to confirm with my firm.
+  5. THE SNIFF TEST    - after 4 minutes, would a partner, a recruit, or a journalist be more convinced I am a voice worth backing, or less?
+Then give me THE VERDICT (one paragraph, do I read as a credible leader today?), THE ONE FIX (the single highest-leverage change, not a list), and COMPLIANCE FLAGS (you are not my compliance team, so flag it and tell me to confirm with my firm).
+
+STEP 2. Then build a branded report as a single downloadable HTML file titled "The Sniff Test," using only what is in the audit above. Include my name and the date, a composite score out of 50, the verdict, the five dimensions each with its score, a thin score bar, the one-line reason and a Next Step, a dark One Fix block, and the compliance flags with a short disclaimer. Style it: parchment background #FAF8F0, near-black ink #211D18, cognac accent #8C6840, display font Cormorant Garamond, body font Inter, square corners, hairline rules, small-caps labels, no em dashes. Add an @page Letter rule, print-color-adjust exact, break-inside avoid on each block, and a fixed "Save as PDF" button that prints cleanly and hides on print.
+
+STEP 3. If you can run code, also render that HTML to a true PDF with the fonts embedded and give it to me as a download.
+
+STEP 4. Also give me a plain, black-and-white, text-only version of the whole audit, no color or graphics, that prints on any printer and is easy to forward to a compliance reviewer.
+
+If you cannot create files, do all of STEP 1 as text, then paste the report HTML in a code block so I can save it myself, with the black-and-white version below it.</pre>
+        <div class="promptbox-note">Tip: screenshot your Google results page and paste the image in too. The model can read it.</div>
+      </div>
+
+      <div class="promptbox">
+        <div class="promptbox-bar"><span>Prompt 02 &middot; The Rewrite</span><button class="copybtn" type="button" onclick="copyPrompt(this)">Copy</button></div>
+        <pre>Using the audit you just ran, rewrite my weakest surface so it reads like a leader with a point of view.
+
+My position: [paste your positioning statement. If you don't have one yet, run The Positioning Blueprint first, then come back].
+
+Rewrite [ my LinkedIn headline and About / my leadership bio / my personal site headline ] so it:
+  - says the same thing across the bio, the profile, and the work (coherence),
+  - could only be me, with no line another industry leader could claim (differentiation),
+  - makes the point of view I am known for unmistakable in the first two lines,
+  - leans on authority, published thinking, speaking, press, and roles, not client outcomes (compliance),
+  - sounds like a person with conviction, not a corporate bio.
+
+Give me two versions, one tighter, one warmer. Then tell me which you'd pick and why.</pre>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch"></div>
+
+  <!-- 06 ROOT CAUSE -->
+  <section class="wrap">
+    <div class="reveal sec-head">
+      <div class="eyebrow">The root cause</div>
+      <h2>If the surfaces don't match, the leak is <em>upstream.</em></h2>
+    </div>
+    <div class="rule" style="margin-top:30px"></div>
+    <div class="reveal split-body" style="margin-top:24px">
+      <p>When the audit says your presence is incoherent or undifferentiated, the instinct is to go polish the bio. Sometimes that helps. Often it does not, because there was never a single point of view for the surfaces to express. You can't make the bio, the profile, and the talks say the same thing until you've decided what that thing is.</p>
+      <p>The two tools are a sequence: <strong style="color:var(--deep);font-weight:500">decide, then prove.</strong></p>
+    </div>
+
+    <div class="out-grid reveal">
+      <a class="out-link" href="/resources/positioning-blueprint">
+        <div class="out">
+          <div class="o-step">First</div>
+          <div class="o-t">The Positioning Blueprint</div>
+          <p>Pick the point of view. Pressure-test it until it holds. The three-pass system that turns a vague title into a position only you can own.</p>
+          <span class="st-here">Get the blueprint <span class="st-cta-arrow" aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <div class="out">
+        <div class="o-step">Then</div>
+        <div class="o-t">The Sniff Test</div>
+        <p>Make every surface say the one thing you committed to, and verify a partner, a recruit, or a reporter would read it as authority.</p>
+        <span class="st-here">You are here</span>
+      </div>
+    </div>
+
+    <div class="st-card cognac reveal">
+      <div class="st-card-label">The honest claim</div>
+      <h4>This won't make you a leader.</h4>
+      <p>It tells you whether your presence already reads like a leader, before the partner, the recruit, or the reporter decides. The work of earning the authority is still yours. This just makes sure that when the introduction comes, your presence confirms you are a voice worth backing instead of quietly suggesting you are not.</p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA / DOWNLOAD -->
+  <section class="final" id="get">
+    <div class="wrap reveal">
+      <div class="eyebrow">Get the audit</div>
+      <h2>Want me to run it <em>with you?</em></h2>
+      <p>Comment <span class="st-keyword">AUDIT</span> on the post and I'll send the full Sniff Test (this page, the PDF, and both prompts) straight to your inbox. Or take it now.</p>
+      <div class="btns">
+        <a href="/resources/audit/The_Sniff_Test_Leadership.pdf" download class="btn btn-solid">Download the PDF <span class="ar" aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="micro">Free &middot; the full audit, both prompts, the checklist</div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-copy">&copy; 2026 Keir Dillon. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/keirdillon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://instagram.com/keirdillon" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://dillonagency.co" target="_blank" rel="noopener noreferrer">Dillon Agency</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+  <script>
+  // Progressive scroll reveal for .pb .reveal elements
+  (function () {
+    var els = document.querySelectorAll('.pb .reveal');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (e) { e.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+  </script>
+</body>
+</html>
