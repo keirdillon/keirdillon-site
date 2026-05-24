@@ -6,6 +6,11 @@
       "source": "/www.keirdillon.com/:path*",
       "destination": "https://keirdillon.com/:path*",
       "statusCode": 301
+    },
+    {
+      "source": "/resources/sniff-test",
+      "destination": "/resources/audit",
+      "statusCode": 301
     }
   ],
   "headers": [

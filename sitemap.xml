@@ -28,6 +28,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://keirdillon.com/resources/audit</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://keirdillon.com/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
