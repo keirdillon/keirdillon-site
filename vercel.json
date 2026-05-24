@@ -11,6 +11,11 @@
       "source": "/resources/sniff-test",
       "destination": "/resources/audit",
       "statusCode": 301
+    },
+    {
+      "source": "/audit",
+      "destination": "/resources/audit",
+      "statusCode": 301
     }
   ],
   "headers": [
