@@ -1,0 +1,57 @@
+[
+ {
+  "file": "dm-sans-300.woff2",
+  "family": "'DM Sans'",
+  "style": "normal",
+  "weight": "300",
+  "name_table_family": "DM Sans Light",
+  "glyphs": 439,
+  "upem": 1000,
+  "ttf_bytes": 48296,
+  "woff2_bytes": 18552
+ },
+ {
+  "file": "dm-sans-400.woff2",
+  "family": "'DM Sans'",
+  "style": "normal",
+  "weight": "400",
+  "name_table_family": "DM Sans",
+  "glyphs": 439,
+  "upem": 1000,
+  "ttf_bytes": 48280,
+  "woff2_bytes": 19120
+ },
+ {
+  "file": "dm-sans-500.woff2",
+  "family": "'DM Sans'",
+  "style": "normal",
+  "weight": "500",
+  "name_table_family": "DM Sans Medium",
+  "glyphs": 439,
+  "upem": 1000,
+  "ttf_bytes": 48308,
+  "woff2_bytes": 19368
+ },
+ {
+  "file": "instrument-serif-400-italic.woff2",
+  "family": "'Instrument Serif'",
+  "style": "italic",
+  "weight": "400",
+  "name_table_family": "Instrument Serif",
+  "glyphs": 342,
+  "upem": 1000,
+  "ttf_bytes": 64208,
+  "woff2_bytes": 26380
+ },
+ {
+  "file": "instrument-serif-400.woff2",
+  "family": "'Instrument Serif'",
+  "style": "normal",
+  "weight": "400",
+  "name_table_family": "Instrument Serif",
+  "glyphs": 342,
+  "upem": 1000,
+  "ttf_bytes": 62284,
+  "woff2_bytes": 25272
+ }
+]

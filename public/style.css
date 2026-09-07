@@ -1233,3 +1233,7 @@ button.btn-primary {
   a { color: inherit; text-decoration: none; }
   .section, .chapter, .page-hero, .hero { padding-top: 0; padding-bottom: 24pt; max-width: 100%; }
 }
+
+/* Inline prose links (added when the resource library gained a pointer to the tools). */
+.page-hero-sub a,.res-card-desc a{color:var(--cognac);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.page-hero-sub a:hover,.res-card-desc a:hover{color:var(--deep)}

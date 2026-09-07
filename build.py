@@ -29,8 +29,12 @@ DIST = ROOT / "dist"
 SITE = json.loads((SOURCE / "site.json").read_text(encoding="utf-8"))
 ORIGIN = SITE["domain"]                       # https://keirdillon.com  (confirmed production host)
 ANALYTICS_ID = "G-THTL2M1JL2"                 # existing GA4 property, preserved from the previous site
-OG_IMAGE = "/assets/keir-editorial.jpg"       # 1600x900 master already shipped with the design
-OG_IMAGE_SIZE = ("1600", "900")
+# Open Graph image, generated alongside the responsive derivatives.
+_OG = json.loads((ROOT / "site-source/src/assets-web/manifest.json").read_text())["keir-editorial.jpg"]["og"]
+OG_IMAGE = "/assets/img/" + _OG["file"]
+OG_IMAGE_SIZE = (str(_OG["w"]), str(_OG["h"]))
+# Faces used in the first screenful of nearly every page.
+PRELOAD_FONTS = ["dm-sans-400.woff2", "instrument-serif-400.woff2", "instrument-serif-400-italic.woff2"]
 FAVICON = (
     "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E"
     "%3Ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%238C6840'/%3E%3C/svg%3E"
@@ -50,7 +54,10 @@ LEGACY_ROUTES = [
 ]
 
 # Retired legacy pages -> their replacement, kept in step with vercel.json.
+# The label moves with the link so the legacy chrome does not send visitors to a
+# page called something else.
 RETIRED = {"/story": "/about", "/thinking": "/guides"}
+RETIRED_LABELS = {">Story<": ">My story<", ">Thinking<": ">Field notes<"}
 
 
 def log(msg):
@@ -158,15 +165,22 @@ ANALYTICS_SNIPPET = (
 CURRENT = {"html": ""}
 
 
-def process_new_page(path, file_rel, production, asset_map):
+def process_new_page(path, file_rel, production, asset_map, font_map):
     html = path.read_text(encoding="utf-8")
     html = rewrite_links(html, file_rel)
+    html, image_preload = to_picture(html, clean_url(file_rel))
     for old, new in asset_map.items():
         html = html.replace(old, new)
     if production:
         html = normalise_trailing_slash(html)
     CURRENT["html"] = html
-    html = html.replace("</head>", head_injection(clean_url(file_rel), production) + "</head>", 1)
+
+    preload = "".join(
+        f'<link rel="preload" as="font" type="font/woff2" '
+        f'href="{font_map[f"/assets/fonts/{name}"]}" crossorigin>'
+        for name in PRELOAD_FONTS if f"/assets/fonts/{name}" in font_map
+    ) + image_preload
+    html = html.replace("</head>", preload + head_injection(clean_url(file_rel), production) + "</head>", 1)
     path.write_text(html, encoding="utf-8")
 
 
@@ -175,6 +189,8 @@ def process_legacy_page(path, production):
     # Point the legacy chrome at the routes that replaced /story and /thinking.
     for old, new in RETIRED.items():
         html = html.replace(f'href="{old}"', f'href="{new}"')
+    for old, new in RETIRED_LABELS.items():
+        html = html.replace(old, new)
     if production:
         if ANALYTICS_ID not in html:
             # /prompts never carried the tag; make analytics consistent across the site.
@@ -196,17 +212,95 @@ def process_legacy_page(path, production):
 # --------------------------------------------------------------------------- #
 # 3. Compose dist/
 # --------------------------------------------------------------------------- #
+IMAGES = json.loads((SOURCE / "src/assets-web/manifest.json").read_text(encoding="utf-8"))
+
+
+def check_masters():
+    """The derivatives are generated offline and committed; make drift loud."""
+    stale = []
+    for filename, e in IMAGES.items():
+        master = SOURCE / "src/assets" / filename
+        if not master.exists():
+            stale.append(filename + " (master missing)")
+        elif hashlib.sha256(master.read_bytes()).hexdigest() != e["master_sha256"]:
+            stale.append(filename + " (master changed)")
+    if stale:
+        raise SystemExit(
+            "Image derivatives are out of date: " + ", ".join(stale)
+            + "\nRe-run tools/build_images.py and commit site-source/src/assets-web/."
+        )
+
+
+def srcset(entries):
+    return ", ".join(f"/assets/img/{v['file']} {v['w']}w" for v in entries)
+
+
+def to_picture(html, page_url):
+    """Swap each <img> for a <picture> with AVIF and WebP sources.
+
+    Every attribute the design set — alt, width/height, loading, decoding,
+    fetchpriority — is carried through to the fallback <img> unchanged, so
+    framing, aspect ratio and loading priority are untouched.
+    """
+    preloads = []
+
+    def one(m):
+        tag = m.group(0)
+        src = re.search(r'src="([^"]+)"', tag).group(1)
+        e = IMAGES.get(posixpath.basename(src))
+        if not e:
+            return tag
+        rest = re.sub(r'\ssrc="[^"]+"', "", tag)[len("<img"):].rstrip("/>").strip()
+        fb = f"/assets/img/{e['fallback']['file']}"
+        if 'fetchpriority="high"' in tag:
+            preloads.append(
+                '<link rel="preload" as="image" type="image/avif" '
+                f'imagesrcset="{escape(srcset(e["avif"]), quote=True)}" '
+                f'imagesizes="{escape(e["sizes"], quote=True)}" fetchpriority="high">'
+            )
+        return (
+            "<picture>"
+            f'<source type="image/avif" srcset="{escape(srcset(e["avif"]), quote=True)}" '
+            f'sizes="{escape(e["sizes"], quote=True)}">'
+            f'<source type="image/webp" srcset="{escape(srcset(e["webp"]), quote=True)}" '
+            f'sizes="{escape(e["sizes"], quote=True)}">'
+            f'<img src="{fb}" {rest}>'
+            "</picture>"
+        )
+
+    html = re.sub(r"<img\b[^>]*>", one, html)
+    return html, "".join(preloads)
+
+
+def hashed(path):
+    digest = hashlib.sha256(path.read_bytes()).hexdigest()[:8]
+    stem, ext = path.name.rsplit(".", 1)
+    new = f"{stem}.{digest}.{ext}"
+    path.rename(path.with_name(new))
+    return new
+
+
 def hash_assets(dist):
-    """Content-hash the generated stylesheet and script so /assets/* can stay immutable."""
+    """Content-hash everything under /assets/ so the immutable cache header is safe.
+
+    Fonts are hashed first because the stylesheet references them; the CSS is
+    hashed afterwards so its own hash covers the rewritten URLs.
+    """
+    fonts = {}
+    for f in sorted((dist / "assets/fonts").glob("*.woff2")):
+        fonts[f"/assets/fonts/{f.name}"] = f"/assets/fonts/{hashed(f)}"
+
+    css = dist / "assets/style.css"
+    text = css.read_text(encoding="utf-8")
+    for old, new in fonts.items():
+        text = text.replace(old, new)
+    css.write_text(text, encoding="utf-8")
+
     mapping = {}
     for name in ("style.css", "site.js"):
         f = dist / "assets" / name
-        digest = hashlib.sha256(f.read_bytes()).hexdigest()[:8]
-        stem, ext = name.rsplit(".", 1)
-        new = f"{stem}.{digest}.{ext}"
-        f.rename(dist / "assets" / new)
-        mapping[f"/assets/{name}"] = f"/assets/{new}"
-    return mapping
+        mapping[f"/assets/{name}"] = f"/assets/{hashed(f)}"
+    return mapping, fonts
 
 
 def write_sitemap(dist, pages):
@@ -233,18 +327,40 @@ def main():
 
     log(f"origin={ORIGIN} production={production} python={sys.version.split()[0]}")
 
+    check_masters()
     built = build_source(production)
 
     if DIST.exists():
         shutil.rmtree(DIST)
     shutil.copytree(built, DIST)
 
-    asset_map = hash_assets(DIST)
+    # Serve the responsive derivatives and the extracted WOFF2 faces; the image
+    # masters and the base64 stylesheet stay in the repo as source only.
+    (DIST / "assets/img").mkdir(parents=True, exist_ok=True)
+    derived = 0
+    for f in sorted((SOURCE / "src/assets-web").iterdir()):
+        if f.suffix in (".avif", ".webp", ".jpg", ".png"):
+            shutil.copyfile(f, DIST / "assets/img" / f.name)
+            derived += 1
+    (DIST / "assets/fonts").mkdir(parents=True, exist_ok=True)
+    for f in sorted((SOURCE / "src/fonts").glob("*.woff2")):
+        shutil.copyfile(f, DIST / "assets/fonts" / f.name)
+    dropped = 0
+    for filename in IMAGES:
+        master = DIST / "assets" / filename
+        if master.exists():
+            master.unlink()
+            dropped += 1
+    log(f"images: {derived} derivatives, {dropped} masters left undeployed; "
+        f"fonts: {len(PRELOAD_FONTS)} preloaded of "
+        f"{len(list((SOURCE / 'src/fonts').glob('*.woff2')))}")
+
+    asset_map, font_map = hash_assets(DIST)
     new_pages = sorted(
         str(p.relative_to(DIST)) for p in DIST.rglob("*.html")
     )
     for rel in new_pages:
-        process_new_page(DIST / rel, rel, production, asset_map)
+        process_new_page(DIST / rel, rel, production, asset_map, font_map)
     log(f"new pages: {len(new_pages)}")
 
     # Overlay the preserved legacy routes. Never overwrite a page from the new build.

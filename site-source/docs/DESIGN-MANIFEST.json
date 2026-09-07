@@ -1,9 +1,14 @@
 {
-  "design": "Approved Rams editorial / same files in both projects",
+  "design": "Approved Rams editorial. fonts.css now references /assets/fonts/*.woff2 instead of embedding base64 TTF (same five faces); brand.css adds .tool-format. Apply the same two changes to the Dillon Agency project so the design files match again.",
   "sha256": {
-    "fonts.css": "d7a33483743b338158fe40ba3974b79983d7b22373e1d4a5caf48f918bbf76d4",
+    "fonts.css": "4365e87ce63e9c8e47aae487605a7d4544c82394928f04e817898033538f6166",
     "style.css": "3b7672154a0fd2f20a06b3210be6ef5184bc807ca20527aabfe5befc80c2302f",
     "visual.css": "94959f3e94d606ec96deec3ab72012dd145dbe7b1417007a00183192a70e6ad7",
-    "brand.css": "5e598dc0bda466c208fd60ff3698bdc6a0e8693dfd51fb2b3bc172c886e04188"
-  }
+    "brand.css": "f3a5ae501c4c1d378dca97b1c2a50434110a4e8d44a12ba269a5ec752172bcb6"
+  },
+  "changed_here": [
+    "fonts.css",
+    "brand.css"
+  ],
+  "fonts_extracted_to": "site-source/src/fonts/ (see fonts-embedded.css for the original)"
 }
