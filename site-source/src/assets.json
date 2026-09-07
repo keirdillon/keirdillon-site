@@ -1,0 +1,137 @@
+{
+  "advisors-hero": {
+    "file": "advisors-hero.png",
+    "width": 1536,
+    "height": 1024,
+    "mime": "image/png",
+    "origin": "Generated editorial illustration",
+    "original_filename": "hero.png",
+    "sha256": "003170d81c534c08c3ae10a5c319c0a3e736d635aeab3dcf4da4e2f74662a10c"
+  },
+  "advisor-walking": {
+    "file": "advisor-walking.png",
+    "width": 1122,
+    "height": 1402,
+    "mime": "image/png",
+    "origin": "Generated editorial illustration",
+    "original_filename": "approach.png",
+    "sha256": "06cf631b6bb3db8c2df322bec5e4a0405606da9d66b124683a1603e2935eee30"
+  },
+  "advisor-community": {
+    "file": "advisor-community.png",
+    "width": 1536,
+    "height": 1024,
+    "mime": "image/png",
+    "origin": "Generated editorial illustration",
+    "original_filename": "community.png",
+    "sha256": "1b54edd60871369349ca86a4bd1cf5c714bc5a58b261a2ecaccf0fb31d09f430"
+  },
+  "keir-editorial": {
+    "file": "keir-editorial.jpg",
+    "width": 1600,
+    "height": 900,
+    "mime": "image/jpeg",
+    "origin": "User supplied archive",
+    "original_filename": "esquire-jim-beam-501longform(1).jpg",
+    "sha256": "062af4c805a94e1260dc290c3c8c4e36b33f4815bacee4d2ee8bba2f15126da3"
+  },
+  "keir-triptych": {
+    "file": "keir-triptych.jpg",
+    "width": 980,
+    "height": 490,
+    "mime": "image/jpeg",
+    "origin": "User supplied archive",
+    "original_filename": "esq x jim-beam-3up-v2.jpg",
+    "sha256": "fbcc484b09a33b546ad942231ca7522aa1d167677f4b2a304ee849d73bbbd3f1"
+  },
+  "frends-product": {
+    "file": "frends-product.jpg",
+    "width": 1128,
+    "height": 2000,
+    "mime": "image/jpeg",
+    "origin": "User supplied archive",
+    "original_filename": "FRENDS Oilslick GB.jpg",
+    "sha256": "82f7748254be9d15120803ff8f7793d943e8e67314b064fbfebc8a11e48c2d11"
+  },
+  "snow-park": {
+    "file": "snow-park.jpg",
+    "width": 576,
+    "height": 856,
+    "mime": "image/jpeg",
+    "origin": "User supplied archive",
+    "original_filename": "Keir_ParkCity_Moran_1040831.jpg",
+    "sha256": "6442fb505aad3fa41496b72c34e106352115e18bdcab1c19858711b8c74ff0d6"
+  },
+  "snow-cover": {
+    "file": "snow-cover.jpg",
+    "width": 1499,
+    "height": 2048,
+    "mime": "image/jpeg",
+    "origin": "User supplied archive",
+    "original_filename": "Snowboard - Onboard Cover.JPG",
+    "sha256": "25538b2609dd05c58e2c8f0fced456e19f8ec8461bb80a2c212ce34f84e5e963"
+  },
+  "espn-summer": {
+    "file": "espn-summer.png",
+    "width": 1432,
+    "height": 827,
+    "mime": "image/png",
+    "origin": "User supplied archive",
+    "original_filename": "ESPN Sideline Reporter Summer X Games Keir Dillon.png",
+    "sha256": "3fd8c2508a775c36bbdf3b79f4c879b4c1297bfdbad0f05a438ff80938d25dec"
+  },
+  "espn-winter": {
+    "file": "espn-winter.png",
+    "width": 1034,
+    "height": 515,
+    "mime": "image/png",
+    "origin": "User supplied archive",
+    "original_filename": "Winter X Games Day 2 Recap - Sal Masekela and Keir(1).png",
+    "sha256": "ba7630f1aa2ff32a6f9220f05f65a36b0ddb465553d165389664d07d94e19c7d"
+  },
+  "frends-fashion": {
+    "file": "frends-fashion.png",
+    "width": 1200,
+    "height": 1472,
+    "mime": "image/png",
+    "origin": "User supplied archive",
+    "original_filename": "Noot-Taylor-Headphones(1).png",
+    "sha256": "0145af99001303d31d86eaf88f7607910e0728b533d575533c3c040bcc628662"
+  },
+  "frends-runway": {
+    "file": "frends-runway.png",
+    "width": 1190,
+    "height": 811,
+    "mime": "image/png",
+    "origin": "User supplied archive",
+    "original_filename": "HP-Hero-D&G-Desktop.png",
+    "sha256": "bc618bf1a8d4b29622bc83ac9e1da31721f8d2c3b8063f4bfaa1239847538ca1"
+  },
+  "shark-tank": {
+    "file": "shark-tank.jpg",
+    "width": 970,
+    "height": 450,
+    "mime": "image/jpeg",
+    "origin": "User supplied archive",
+    "original_filename": "TV - keir-shark-01-2016_96623.jpg",
+    "sha256": "d772abb2d3bd44beb4cc85c8f5783e11bed726ff39e84a6a18a6b9ca9f7035d8"
+  },
+  "open-cans": {
+    "file": "open-cans.png",
+    "width": 1164,
+    "height": 972,
+    "mime": "image/png",
+    "origin": "User supplied archive",
+    "original_filename": "OPEN Cans(1).png",
+    "sha256": "43d9533c615751cce709b95df237433a407a4a6119b591d3bde203d5551bf757"
+  },
+  "keir-current": {
+    "file": "keir-current.jpg",
+    "width": 800,
+    "height": 778,
+    "mime": "image/jpeg",
+    "origin": "Keir public website portrait",
+    "original_filename": "keir.jpg",
+    "sha256": "b428077a30b663f1bca0415bd95020fdca0791c0d63ba2623614c4968bbc1608"
+  }
+}

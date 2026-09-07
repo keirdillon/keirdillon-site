@@ -1,0 +1,9 @@
+{
+  "design": "Approved Rams editorial / same files in both projects",
+  "sha256": {
+    "fonts.css": "d7a33483743b338158fe40ba3974b79983d7b22373e1d4a5caf48f918bbf76d4",
+    "style.css": "3b7672154a0fd2f20a06b3210be6ef5184bc807ca20527aabfe5befc80c2302f",
+    "visual.css": "94959f3e94d606ec96deec3ab72012dd145dbe7b1417007a00183192a70e6ad7",
+    "brand.css": "5e598dc0bda466c208fd60ff3698bdc6a0e8693dfd51fb2b3bc172c886e04188"
+  }
+}

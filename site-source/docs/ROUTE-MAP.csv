@@ -1,0 +1,10 @@
+Existing or candidate path,New destination or treatment,Integration instruction
+/,/,Replace with approved personal homepage
+/story and /story.html,/about/,Merge original biography and archive; redirect retired aliases after review
+/thinking and /thinking.html,/guides/,Retain useful writing and map individual routes before redirects
+/resources and /resources/*,Retain plus /tools/,"Preserve deep tools, PDFs, and audience variants; new tools are companions"
+/prompts and /prompts/*,Retain,Keep existing prompt library and links
+/contact and /contact.html,/contact/,Preserve functioning form/provider if desired; email fallback exists
+/approach/,/approach/,Concise Work with me; detailed firm service scope lives on agency domain
+/selected-work/,/selected-work/,Personal summaries; full Coastal scope links to agency
+Google verification and existing policies,Retain,Copy into final public output or integrate with build

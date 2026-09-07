@@ -1,0 +1,86 @@
+[
+  {
+    "id": "home",
+    "path": "/",
+    "title": "Keir Dillon | Fractional CMO and founder of Dillon Agency",
+    "description": "Meet Keir Dillon: fractional CMO for wealth management firms, founder of Dillon Agency, and a practical voice on brand strategy and advisor marketing."
+  },
+  {
+    "id": "approach",
+    "path": "/approach/",
+    "title": "Work with Keir Dillon | Fractional CMO",
+    "description": "Work with Keir Dillon as a fractional CMO through Dillon Agency. Brand direction, marketing leadership, recruiting, and advisor support for wealth management firms."
+  },
+  {
+    "id": "work",
+    "path": "/selected-work/",
+    "title": "Selected work and perspective | Keir Dillon",
+    "description": "Keir Dillon\u2019s contribution to firm marketing leadership and the founder experience behind his approach. Explore the Coastal Wealth scope at Dillon Agency."
+  },
+  {
+    "id": "tools",
+    "path": "/tools/",
+    "title": "Brand and marketing resources for financial advisors",
+    "description": "Practical advisor positioning, presence, and content tools from Keir Dillon, a fractional CMO working with wealth management firms."
+  },
+  {
+    "id": "brief",
+    "path": "/tools/client-brief/",
+    "title": "The Positioning Blueprint: client brief",
+    "description": "Build a working client-attraction brief and introduction for your financial-advisor practice."
+  },
+  {
+    "id": "audit",
+    "path": "/tools/presence-check/",
+    "title": "The Sniff Test: advisor presence self-review",
+    "description": "Review whether a prospective client can understand your audience, value, evidence, and next step."
+  },
+  {
+    "id": "planner",
+    "path": "/tools/content-plan/",
+    "title": "Client-question content planner for financial advisors",
+    "description": "Turn one client question into four useful weekly content outlines."
+  },
+  {
+    "id": "guides",
+    "path": "/guides/",
+    "title": "Financial advisor brand and marketing guides",
+    "description": "Advisor marketing field notes from Keir Dillon. Practical guidance informed by the connection between firm-level marketing leadership and advisor support."
+  },
+  {
+    "id": "ideal",
+    "path": "/guides/define-ideal-client/",
+    "title": "How financial advisors can define their ideal client",
+    "description": "A practical way to choose an advisor client focus, pressure-test it, and translate it into a brand message."
+  },
+  {
+    "id": "referrals",
+    "path": "/guides/referral-presence/",
+    "title": "What a referred prospect should find on an advisor website",
+    "description": "Review the introduction, evidence, affiliation, and next step that support a financial-advisor referral."
+  },
+  {
+    "id": "marketing",
+    "path": "/guides/financial-advisor-marketing-plan/",
+    "title": "A practical financial advisor marketing plan",
+    "description": "Build a focused marketing plan around a client situation, a message, a channel, a routine, and useful measurement."
+  },
+  {
+    "id": "about",
+    "path": "/about/",
+    "title": "Keir Dillon: athlete, founder, fractional CMO",
+    "description": "From professional snowboarding and FRENDS to fractional CMO leadership in financial services. The experience behind Keir Dillon\u2019s approach."
+  },
+  {
+    "id": "room",
+    "path": "/the-operators-room/",
+    "title": "The Operator\u2019s Room: advisor brand and content community",
+    "description": "The Operator\u2019s Room: an advisor learning community concept from fractional CMO Keir Dillon. Explore current resources and follow its development."
+  },
+  {
+    "id": "contact",
+    "path": "/contact/",
+    "title": "Contact Keir Dillon",
+    "description": "Contact Keir Dillon about fractional CMO work, advisor marketing, partnerships, speaking, or an idea worth exploring."
+  }
+]
