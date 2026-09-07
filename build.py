@@ -130,17 +130,23 @@ def head_injection(url, production):
     title = title.group(1) if title else SITE["brand"]
     desc = desc.group(1) if desc else ""
     bits += [
-        f'<meta property="og:image" content="{ORIGIN}{OG_IMAGE}">',
-        f'<meta property="og:image:width" content="{OG_IMAGE_SIZE[0]}">',
-        f'<meta property="og:image:height" content="{OG_IMAGE_SIZE[1]}">',
-        '<meta property="og:image:alt" content="Keir Dillon, fractional CMO and founder of Dillon Agency">',
+        social_image_tags(),
         '<meta name="twitter:card" content="summary_large_image">',
         f'<meta name="twitter:title" content="{title}">',
         f'<meta name="twitter:description" content="{desc}">',
-        f'<meta name="twitter:image" content="{ORIGIN}{OG_IMAGE}">',
         ANALYTICS_SNIPPET,
     ]
     return "".join(bits)
+
+
+def social_image_tags():
+    return (
+        f'<meta property="og:image" content="{ORIGIN}{OG_IMAGE}">'
+        f'<meta property="og:image:width" content="{OG_IMAGE_SIZE[0]}">'
+        f'<meta property="og:image:height" content="{OG_IMAGE_SIZE[1]}">'
+        '<meta property="og:image:alt" content="Keir Dillon, fractional CMO and founder of Dillon Agency">'
+        f'<meta name="twitter:image" content="{ORIGIN}{OG_IMAGE}">'
+    )
 
 
 ANALYTICS_SNIPPET = (
@@ -174,6 +180,9 @@ def process_legacy_page(path, production):
             # /prompts never carried the tag; make analytics consistent across the site.
             html = html.replace("</head>", ANALYTICS_SNIPPET + "</head>", 1)
             log(f"  + analytics added to {path.relative_to(DIST)}")
+        if "og:image" not in html:
+            # These pages already declare summary_large_image but shipped no image.
+            html = html.replace("</head>", social_image_tags() + "</head>", 1)
     else:
         html = re.sub(r'<meta name="robots"[^>]*>', "", html)
         html = html.replace("<head>", '<head><meta name="robots" content="noindex,nofollow">', 1)
