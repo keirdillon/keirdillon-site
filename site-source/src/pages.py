@@ -590,18 +590,18 @@ PAGES = [{'id': 'home',
  {'id': 'room',
   'path': '/the-operators-room/',
   'title': 'The Operator’s Room: an advisor community in development',
-  'description': 'The Operator’s Room is a learning community for financial advisors that is still '
-                 'in development. See what it will cover, use the free advisor tools available '
-                 'now, and follow its progress.',
-  'body': '<section class="room-opening"><p class="kicker">The Operator’s Room / In '
-          'development</p><h1>Good work gets better<br><em>in good company.</em></h1><p '
-          'class="intro">A learning community taking shape for financial advisors who want to '
-          'build a more recognizable practice. It is not open yet — there is nothing to join, and '
-          'no fee or start date to announce.</p></section><figure class="photo '
-          'community-photo"><img src="{{asset:advisor-community}}" alt="Illustrative scene of four '
-          'advisors sharing ideas around a studio meeting table" loading="eager" decoding="async" '
-          'fetchpriority="high"><figcaption>The kind of working conversation we’re building '
-          'toward. Illustrative image.</figcaption></figure><section '
+  'description': 'The Operator’s Room: a learning community in development for financial advisors '
+                 'who want a more recognizable practice. See what it covers, and use the free '
+                 'advisor tools available now.',
+  'body': '<section class="room-opening"><p class="kicker">The Operator’s Room</p><h1>Good work '
+          'gets better<br><em>in good company.</em></h1><p class="intro">A learning community for '
+          'financial advisors who want a more recognizable practice: somewhere to bring a real '
+          'question and leave with something you can use. It is in development now, and the '
+          'questions advisors send me are shaping what it covers.</p></section><figure '
+          'class="photo community-photo"><img src="{{asset:advisor-community}}" alt="Illustrative '
+          'scene of four advisors sharing ideas around a studio meeting table" loading="eager" '
+          'decoding="async" fetchpriority="high"><figcaption>The kind of working conversation it '
+          'is designed around. Illustrative image.</figcaption></figure><section '
           'class="room-body"><div><h2>Bring a question.<br><em>Leave with something '
           'useful.</em></h2><p>How do I explain what makes my practice relevant? What should my '
           'website say? How do I create useful content without turning it into another full-time '
@@ -611,19 +611,17 @@ PAGES = [{'id': 'home',
           'class="room-agenda"><h3>The work on the table</h3><p>Client focus and '
           'positioning</p><p>Brand, website, and profile clarity</p><p>A content routine you can '
           'sustain</p><p>Practical AI with human judgment</p></div></section><section '
-          'class="simple-close metal-surface"><h2>Nothing to join yet.<br><em>Plenty to use '
-          'now.</em></h2><div><p>There is no sign-up, waiting list, or membership at this stage. '
-          'The free <a href="[[tools]]">advisor tools</a> are ready today, and I am glad to talk '
-          'through a question you are working on.</p><a class="button" '
+          'class="simple-close metal-surface"><h2>Send me the question<br><em>you are sitting '
+          'on.</em></h2><div><p>It will help shape what the Room covers, and I will answer it '
+          'either way. In the meantime the free <a href="[[tools]]">advisor tools</a> cover '
+          'positioning, presence, and a content plan you can start this week.</p><a class="button" '
           'href="mailto:keir@dillonagency.co?subject=A%20question%20for%20The%20Operator%E2%80%99s%20Room">Email '
-          'Keir</a><p class="note spacer">Group sessions and a community platform are still being '
-          'developed. If that changes, any program will have its own clearly stated scope and '
-          'terms.</p><a class="text-action" href="https://linkedin.com/in/keirdillon" '
+          'Keir</a><a class="text-action" href="https://linkedin.com/in/keirdillon" '
           'target="_blank" rel="noopener">Follow the work on LinkedIn <span '
           'aria-hidden="true">↗</span></a></div></section><p class="note room-expectation">An '
-          'independent learning community. If it opens, participation will not be permission for '
-          'recruiting or vendor outreach. Keep client details private and use your firm’s normal '
-          'review process.</p>'},
+          'independent learning community. Participation will not be permission for recruiting or '
+          'vendor outreach. Keep client details private and use your firm’s normal review '
+          'process.</p>'},
  {'id': 'contact',
   'path': '/contact/',
   'title': 'Contact Keir Dillon',
