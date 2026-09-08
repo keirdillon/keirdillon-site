@@ -1,0 +1,966 @@
+{
+ "advisor-community.png": {
+  "key": "advisor-community",
+  "master": "advisor-community.png",
+  "master_sha256": "1b54edd60871369349ca86a4bd1cf5c714bc5a58b261a2ecaccf0fb31d09f430",
+  "natural": [
+   1536,
+   1024
+  ],
+  "alpha": false,
+  "sizes": "(min-width: 1600px) 1335px, (min-width: 1280px) 1319px, (min-width: 768px) 92vw, 92vw",
+  "avif": [
+   {
+    "file": "advisor-community-312.avif",
+    "w": 312,
+    "bytes": 8428
+   },
+   {
+    "file": "advisor-community-437.avif",
+    "w": 437,
+    "bytes": 14313
+   },
+   {
+    "file": "advisor-community-612.avif",
+    "w": 612,
+    "bytes": 22973
+   },
+   {
+    "file": "advisor-community-856.avif",
+    "w": 856,
+    "bytes": 37639
+   },
+   {
+    "file": "advisor-community-1536.avif",
+    "w": 1536,
+    "bytes": 82562
+   }
+  ],
+  "webp": [
+   {
+    "file": "advisor-community-312.webp",
+    "w": 312,
+    "bytes": 10950
+   },
+   {
+    "file": "advisor-community-437.webp",
+    "w": 437,
+    "bytes": 18326
+   },
+   {
+    "file": "advisor-community-612.webp",
+    "w": 612,
+    "bytes": 29330
+   },
+   {
+    "file": "advisor-community-856.webp",
+    "w": 856,
+    "bytes": 46664
+   },
+   {
+    "file": "advisor-community-1536.webp",
+    "w": 1536,
+    "bytes": 98462
+   }
+  ],
+  "quality": {
+   "avif": 62,
+   "webp": 80
+  },
+  "fallback": {
+   "file": "advisor-community-1335.jpg",
+   "w": 1335,
+   "bytes": 175655
+  },
+  "fallback_height": 890,
+  "psnr": 40.2
+ },
+ "espn-summer.png": {
+  "key": "espn-summer",
+  "master": "espn-summer.png",
+  "master_sha256": "3fd8c2508a775c36bbdf3b79f4c879b4c1297bfdbad0f05a438ff80938d25dec",
+  "natural": [
+   1432,
+   827
+  ],
+  "alpha": false,
+  "sizes": "(min-width: 1600px) 669px, (min-width: 1280px) 660px, (min-width: 768px) 46vw, 92vw",
+  "avif": [
+   {
+    "file": "espn-summer-312.avif",
+    "w": 312,
+    "bytes": 8922
+   },
+   {
+    "file": "espn-summer-437.avif",
+    "w": 437,
+    "bytes": 14724
+   },
+   {
+    "file": "espn-summer-612.avif",
+    "w": 612,
+    "bytes": 22829
+   },
+   {
+    "file": "espn-summer-856.avif",
+    "w": 856,
+    "bytes": 34047
+   },
+   {
+    "file": "espn-summer-1338.avif",
+    "w": 1338,
+    "bytes": 56227
+   }
+  ],
+  "webp": [
+   {
+    "file": "espn-summer-312.webp",
+    "w": 312,
+    "bytes": 10886
+   },
+   {
+    "file": "espn-summer-437.webp",
+    "w": 437,
+    "bytes": 18164
+   },
+   {
+    "file": "espn-summer-612.webp",
+    "w": 612,
+    "bytes": 28460
+   },
+   {
+    "file": "espn-summer-856.webp",
+    "w": 856,
+    "bytes": 42908
+   },
+   {
+    "file": "espn-summer-1338.webp",
+    "w": 1338,
+    "bytes": 70046
+   }
+  ],
+  "quality": {
+   "avif": 62,
+   "webp": 80
+  },
+  "fallback": {
+   "file": "espn-summer-669.jpg",
+   "w": 669,
+   "bytes": 53329
+  },
+  "fallback_height": 386,
+  "psnr": 40.4
+ },
+ "espn-winter.png": {
+  "key": "espn-winter",
+  "master": "espn-winter.png",
+  "master_sha256": "ba7630f1aa2ff32a6f9220f05f65a36b0ddb465553d165389664d07d94e19c7d",
+  "natural": [
+   1034,
+   515
+  ],
+  "alpha": false,
+  "sizes": "(min-width: 1600px) 495px, (min-width: 1280px) 489px, (min-width: 768px) 34vw, 72vw",
+  "avif": [
+   {
+    "file": "espn-winter-230.avif",
+    "w": 230,
+    "bytes": 15021
+   },
+   {
+    "file": "espn-winter-322.avif",
+    "w": 322,
+    "bytes": 19643
+   },
+   {
+    "file": "espn-winter-451.avif",
+    "w": 451,
+    "bytes": 27640
+   },
+   {
+    "file": "espn-winter-631.avif",
+    "w": 631,
+    "bytes": 38826
+   },
+   {
+    "file": "espn-winter-990.avif",
+    "w": 990,
+    "bytes": 59579
+   }
+  ],
+  "webp": [
+   {
+    "file": "espn-winter-230.webp",
+    "w": 230,
+    "bytes": 8766
+   },
+   {
+    "file": "espn-winter-322.webp",
+    "w": 322,
+    "bytes": 14452
+   },
+   {
+    "file": "espn-winter-451.webp",
+    "w": 451,
+    "bytes": 23438
+   },
+   {
+    "file": "espn-winter-631.webp",
+    "w": 631,
+    "bytes": 36800
+   },
+   {
+    "file": "espn-winter-990.webp",
+    "w": 990,
+    "bytes": 61154
+   }
+  ],
+  "quality": {
+   "avif": 68,
+   "webp": 83
+  },
+  "fallback": {
+   "file": "espn-winter-495.jpg",
+   "w": 495,
+   "bytes": 38824
+  },
+  "fallback_height": 247,
+  "psnr": 39.3
+ },
+ "frends-fashion.png": {
+  "key": "frends-fashion",
+  "master": "frends-fashion.png",
+  "master_sha256": "0145af99001303d31d86eaf88f7607910e0728b533d575533c3c040bcc628662",
+  "natural": [
+   1200,
+   1472
+  ],
+  "alpha": false,
+  "sizes": "(min-width: 1600px) 545px, (min-width: 1280px) 539px, (min-width: 768px) 37vw, 45vw",
+  "avif": [
+   {
+    "file": "frends-fashion-160.avif",
+    "w": 160,
+    "bytes": 6111
+   },
+   {
+    "file": "frends-fashion-224.avif",
+    "w": 224,
+    "bytes": 10406
+   },
+   {
+    "file": "frends-fashion-314.avif",
+    "w": 314,
+    "bytes": 18310
+   },
+   {
+    "file": "frends-fashion-439.avif",
+    "w": 439,
+    "bytes": 32811
+   },
+   {
+    "file": "frends-fashion-615.avif",
+    "w": 615,
+    "bytes": 60015
+   },
+   {
+    "file": "frends-fashion-1090.avif",
+    "w": 1090,
+    "bytes": 157958
+   }
+  ],
+  "webp": [
+   {
+    "file": "frends-fashion-160.webp",
+    "w": 160,
+    "bytes": 7064
+   },
+   {
+    "file": "frends-fashion-224.webp",
+    "w": 224,
+    "bytes": 12108
+   },
+   {
+    "file": "frends-fashion-314.webp",
+    "w": 314,
+    "bytes": 20758
+   },
+   {
+    "file": "frends-fashion-439.webp",
+    "w": 439,
+    "bytes": 36364
+   },
+   {
+    "file": "frends-fashion-615.webp",
+    "w": 615,
+    "bytes": 65930
+   },
+   {
+    "file": "frends-fashion-1090.webp",
+    "w": 1090,
+    "bytes": 166358
+   }
+  ],
+  "quality": {
+   "avif": 68,
+   "webp": 83
+  },
+  "fallback": {
+   "file": "frends-fashion-545.jpg",
+   "w": 545,
+   "bytes": 77038
+  },
+  "fallback_height": 669,
+  "psnr": 39.2
+ },
+ "frends-product.jpg": {
+  "key": "frends-product",
+  "master": "frends-product.jpg",
+  "master_sha256": "82f7748254be9d15120803ff8f7793d943e8e67314b064fbfebc8a11e48c2d11",
+  "natural": [
+   1128,
+   2000
+  ],
+  "alpha": false,
+  "sizes": "(min-width: 1600px) 571px, (min-width: 1280px) 564px, (min-width: 768px) 37vw, 85vw",
+  "avif": [
+   {
+    "file": "frends-product-264.avif",
+    "w": 264,
+    "bytes": 9277
+   },
+   {
+    "file": "frends-product-370.avif",
+    "w": 370,
+    "bytes": 11732
+   },
+   {
+    "file": "frends-product-517.avif",
+    "w": 517,
+    "bytes": 16775
+   },
+   {
+    "file": "frends-product-724.avif",
+    "w": 724,
+    "bytes": 26275
+   },
+   {
+    "file": "frends-product-1128.avif",
+    "w": 1128,
+    "bytes": 49145
+   }
+  ],
+  "webp": [
+   {
+    "file": "frends-product-264.webp",
+    "w": 264,
+    "bytes": 6492
+   },
+   {
+    "file": "frends-product-370.webp",
+    "w": 370,
+    "bytes": 10442
+   },
+   {
+    "file": "frends-product-517.webp",
+    "w": 517,
+    "bytes": 17110
+   },
+   {
+    "file": "frends-product-724.webp",
+    "w": 724,
+    "bytes": 29274
+   },
+   {
+    "file": "frends-product-1128.webp",
+    "w": 1128,
+    "bytes": 58242
+   }
+  ],
+  "quality": {
+   "avif": 62,
+   "webp": 80
+  },
+  "fallback": {
+   "file": "frends-product-571.jpg",
+   "w": 571,
+   "bytes": 42064
+  },
+  "fallback_height": 1012,
+  "psnr": 41.5
+ },
+ "frends-runway.png": {
+  "key": "frends-runway",
+  "master": "frends-runway.png",
+  "master_sha256": "bc618bf1a8d4b29622bc83ac9e1da31721f8d2c3b8063f4bfaa1239847538ca1",
+  "natural": [
+   1190,
+   811
+  ],
+  "alpha": false,
+  "sizes": "(min-width: 1600px) 750px, (min-width: 1280px) 740px, (min-width: 768px) 51vw, 45vw",
+  "avif": [
+   {
+    "file": "frends-runway-160.avif",
+    "w": 160,
+    "bytes": 3445
+   },
+   {
+    "file": "frends-runway-224.avif",
+    "w": 224,
+    "bytes": 5916
+   },
+   {
+    "file": "frends-runway-314.avif",
+    "w": 314,
+    "bytes": 10063
+   },
+   {
+    "file": "frends-runway-439.avif",
+    "w": 439,
+    "bytes": 17662
+   },
+   {
+    "file": "frends-runway-615.avif",
+    "w": 615,
+    "bytes": 30411
+   },
+   {
+    "file": "frends-runway-1190.avif",
+    "w": 1190,
+    "bytes": 76694
+   }
+  ],
+  "webp": [
+   {
+    "file": "frends-runway-160.webp",
+    "w": 160,
+    "bytes": 3808
+   },
+   {
+    "file": "frends-runway-224.webp",
+    "w": 224,
+    "bytes": 6572
+   },
+   {
+    "file": "frends-runway-314.webp",
+    "w": 314,
+    "bytes": 11480
+   },
+   {
+    "file": "frends-runway-439.webp",
+    "w": 439,
+    "bytes": 19768
+   },
+   {
+    "file": "frends-runway-615.webp",
+    "w": 615,
+    "bytes": 33898
+   },
+   {
+    "file": "frends-runway-1190.webp",
+    "w": 1190,
+    "bytes": 84188
+   }
+  ],
+  "quality": {
+   "avif": 68,
+   "webp": 83
+  },
+  "fallback": {
+   "file": "frends-runway-750.jpg",
+   "w": 750,
+   "bytes": 66510
+  },
+  "fallback_height": 511,
+  "psnr": 38.3
+ },
+ "keir-current.jpg": {
+  "key": "keir-current",
+  "master": "keir-current.jpg",
+  "master_sha256": "b428077a30b663f1bca0415bd95020fdca0791c0d63ba2623614c4968bbc1608",
+  "natural": [
+   800,
+   778
+  ],
+  "alpha": false,
+  "sizes": "(min-width: 1600px) 466px, (min-width: 1280px) 460px, (min-width: 768px) 32vw, 80vw",
+  "avif": [
+   {
+    "file": "keir-current-280.avif",
+    "w": 280,
+    "bytes": 6060
+   },
+   {
+    "file": "keir-current-392.avif",
+    "w": 392,
+    "bytes": 9841
+   },
+   {
+    "file": "keir-current-549.avif",
+    "w": 549,
+    "bytes": 16423
+   },
+   {
+    "file": "keir-current-800.avif",
+    "w": 800,
+    "bytes": 30824
+   }
+  ],
+  "webp": [
+   {
+    "file": "keir-current-280.webp",
+    "w": 280,
+    "bytes": 7356
+   },
+   {
+    "file": "keir-current-392.webp",
+    "w": 392,
+    "bytes": 11610
+   },
+   {
+    "file": "keir-current-549.webp",
+    "w": 549,
+    "bytes": 18624
+   },
+   {
+    "file": "keir-current-800.webp",
+    "w": 800,
+    "bytes": 32672
+   }
+  ],
+  "quality": {
+   "avif": 62,
+   "webp": 80
+  },
+  "fallback": {
+   "file": "keir-current-466.jpg",
+   "w": 466,
+   "bytes": 34657
+  },
+  "fallback_height": 453,
+  "psnr": 41.8
+ },
+ "keir-editorial.jpg": {
+  "key": "keir-editorial",
+  "master": "keir-editorial.jpg",
+  "master_sha256": "062af4c805a94e1260dc290c3c8c4e36b33f4815bacee4d2ee8bba2f15126da3",
+  "natural": [
+   1600,
+   900
+  ],
+  "alpha": false,
+  "sizes": "(min-width: 1600px) 626px, (min-width: 1280px) 619px, (min-width: 768px) 43vw, 90vw",
+  "avif": [
+   {
+    "file": "keir-editorial-302.avif",
+    "w": 302,
+    "bytes": 8215
+   },
+   {
+    "file": "keir-editorial-423.avif",
+    "w": 423,
+    "bytes": 13261
+   },
+   {
+    "file": "keir-editorial-592.avif",
+    "w": 592,
+    "bytes": 20600
+   },
+   {
+    "file": "keir-editorial-829.avif",
+    "w": 829,
+    "bytes": 32531
+   },
+   {
+    "file": "keir-editorial-1252.avif",
+    "w": 1252,
+    "bytes": 57660
+   }
+  ],
+  "webp": [
+   {
+    "file": "keir-editorial-302.webp",
+    "w": 302,
+    "bytes": 10958
+   },
+   {
+    "file": "keir-editorial-423.webp",
+    "w": 423,
+    "bytes": 17618
+   },
+   {
+    "file": "keir-editorial-592.webp",
+    "w": 592,
+    "bytes": 26694
+   },
+   {
+    "file": "keir-editorial-829.webp",
+    "w": 829,
+    "bytes": 41762
+   },
+   {
+    "file": "keir-editorial-1252.webp",
+    "w": 1252,
+    "bytes": 70224
+   }
+  ],
+  "quality": {
+   "avif": 62,
+   "webp": 80
+  },
+  "fallback": {
+   "file": "keir-editorial-626.jpg",
+   "w": 626,
+   "bytes": 49027
+  },
+  "fallback_height": 352,
+  "og": {
+   "file": "keir-editorial-og-1600.jpg",
+   "w": 1600,
+   "h": 900,
+   "bytes": 169724
+  },
+  "psnr": 39.1
+ },
+ "keir-triptych.jpg": {
+  "key": "keir-triptych",
+  "master": "keir-triptych.jpg",
+  "master_sha256": "fbcc484b09a33b546ad942231ca7522aa1d167677f4b2a304ee849d73bbbd3f1",
+  "natural": [
+   980,
+   490
+  ],
+  "alpha": false,
+  "sizes": "(min-width: 1600px) 1295px, (min-width: 1280px) 1279px, (min-width: 768px) 88vw, 89vw",
+  "avif": [
+   {
+    "file": "keir-triptych-292.avif",
+    "w": 292,
+    "bytes": 11002
+   },
+   {
+    "file": "keir-triptych-409.avif",
+    "w": 409,
+    "bytes": 18930
+   },
+   {
+    "file": "keir-triptych-572.avif",
+    "w": 572,
+    "bytes": 33407
+   },
+   {
+    "file": "keir-triptych-980.avif",
+    "w": 980,
+    "bytes": 84115
+   }
+  ],
+  "webp": [
+   {
+    "file": "keir-triptych-292.webp",
+    "w": 292,
+    "bytes": 12970
+   },
+   {
+    "file": "keir-triptych-409.webp",
+    "w": 409,
+    "bytes": 22028
+   },
+   {
+    "file": "keir-triptych-572.webp",
+    "w": 572,
+    "bytes": 38478
+   },
+   {
+    "file": "keir-triptych-980.webp",
+    "w": 980,
+    "bytes": 96594
+   }
+  ],
+  "quality": {
+   "avif": 68,
+   "webp": 83
+  },
+  "fallback": {
+   "file": "keir-triptych-980.jpg",
+   "w": 980,
+   "bytes": 112508
+  },
+  "fallback_height": 490,
+  "psnr": 39.3
+ },
+ "open-cans.png": {
+  "key": "open-cans",
+  "master": "open-cans.png",
+  "master_sha256": "43d9533c615751cce709b95df237433a407a4a6119b591d3bde203d5551bf757",
+  "natural": [
+   1164,
+   972
+  ],
+  "alpha": true,
+  "sizes": "(min-width: 1600px) 634px, (min-width: 1280px) 625px, (min-width: 768px) 42vw, 85vw",
+  "avif": [
+   {
+    "file": "open-cans-264.avif",
+    "w": 264,
+    "bytes": 16509
+   },
+   {
+    "file": "open-cans-370.avif",
+    "w": 370,
+    "bytes": 27723
+   },
+   {
+    "file": "open-cans-517.avif",
+    "w": 517,
+    "bytes": 46779
+   },
+   {
+    "file": "open-cans-724.avif",
+    "w": 724,
+    "bytes": 81169
+   },
+   {
+    "file": "open-cans-1164.avif",
+    "w": 1164,
+    "bytes": 198143
+   }
+  ],
+  "webp": [
+   {
+    "file": "open-cans-264.webp",
+    "w": 264,
+    "bytes": 20848
+   },
+   {
+    "file": "open-cans-370.webp",
+    "w": 370,
+    "bytes": 34502
+   },
+   {
+    "file": "open-cans-517.webp",
+    "w": 517,
+    "bytes": 56060
+   },
+   {
+    "file": "open-cans-724.webp",
+    "w": 724,
+    "bytes": 96686
+   },
+   {
+    "file": "open-cans-1164.webp",
+    "w": 1164,
+    "bytes": 229880
+   }
+  ],
+  "quality": {
+   "avif": 86,
+   "webp": 92
+  },
+  "fallback": {
+   "file": "open-cans-634.png",
+   "w": 634,
+   "bytes": 452644
+  },
+  "fallback_height": 529,
+  "psnr": 37.9
+ },
+ "shark-tank.jpg": {
+  "key": "shark-tank",
+  "master": "shark-tank.jpg",
+  "master_sha256": "d772abb2d3bd44beb4cc85c8f5783e11bed726ff39e84a6a18a6b9ca9f7035d8",
+  "natural": [
+   970,
+   450
+  ],
+  "alpha": false,
+  "sizes": "(min-width: 1600px) 932px, (min-width: 1280px) 932px, (min-width: 768px) 88vw, 89vw",
+  "avif": [
+   {
+    "file": "shark-tank-290.avif",
+    "w": 290,
+    "bytes": 9055
+   },
+   {
+    "file": "shark-tank-406.avif",
+    "w": 406,
+    "bytes": 14621
+   },
+   {
+    "file": "shark-tank-568.avif",
+    "w": 568,
+    "bytes": 23996
+   },
+   {
+    "file": "shark-tank-970.avif",
+    "w": 970,
+    "bytes": 56995
+   }
+  ],
+  "webp": [
+   {
+    "file": "shark-tank-290.webp",
+    "w": 290,
+    "bytes": 10934
+   },
+   {
+    "file": "shark-tank-406.webp",
+    "w": 406,
+    "bytes": 17762
+   },
+   {
+    "file": "shark-tank-568.webp",
+    "w": 568,
+    "bytes": 28260
+   },
+   {
+    "file": "shark-tank-970.webp",
+    "w": 970,
+    "bytes": 60030
+   }
+  ],
+  "quality": {
+   "avif": 68,
+   "webp": 83
+  },
+  "fallback": {
+   "file": "shark-tank-932.jpg",
+   "w": 932,
+   "bytes": 87736
+  },
+  "fallback_height": 432,
+  "psnr": 39.4
+ },
+ "snow-cover.jpg": {
+  "key": "snow-cover",
+  "master": "snow-cover.jpg",
+  "master_sha256": "25538b2609dd05c58e2c8f0fced456e19f8ec8461bb80a2c212ce34f84e5e963",
+  "natural": [
+   1499,
+   2048
+  ],
+  "alpha": false,
+  "sizes": "(min-width: 1600px) 255px, (min-width: 1280px) 252px, (min-width: 768px) 17vw, 33vw",
+  "avif": [
+   {
+    "file": "snow-cover-160.avif",
+    "w": 160,
+    "bytes": 10705
+   },
+   {
+    "file": "snow-cover-224.avif",
+    "w": 224,
+    "bytes": 17697
+   },
+   {
+    "file": "snow-cover-314.avif",
+    "w": 314,
+    "bytes": 31370
+   },
+   {
+    "file": "snow-cover-510.avif",
+    "w": 510,
+    "bytes": 71815
+   }
+  ],
+  "webp": [
+   {
+    "file": "snow-cover-160.webp",
+    "w": 160,
+    "bytes": 12358
+   },
+   {
+    "file": "snow-cover-224.webp",
+    "w": 224,
+    "bytes": 20958
+   },
+   {
+    "file": "snow-cover-314.webp",
+    "w": 314,
+    "bytes": 35718
+   },
+   {
+    "file": "snow-cover-510.webp",
+    "w": 510,
+    "bytes": 78190
+   }
+  ],
+  "quality": {
+   "avif": 86,
+   "webp": 92
+  },
+  "fallback": {
+   "file": "snow-cover-255.jpg",
+   "w": 255,
+   "bytes": 23749
+  },
+  "fallback_height": 348,
+  "psnr": 37.7
+ },
+ "snow-park.jpg": {
+  "key": "snow-park",
+  "master": "snow-park.jpg",
+  "master_sha256": "6442fb505aad3fa41496b72c34e106352115e18bdcab1c19858711b8c74ff0d6",
+  "natural": [
+   576,
+   856
+  ],
+  "alpha": false,
+  "sizes": "(min-width: 1600px) 420px, (min-width: 1280px) 414px, (min-width: 768px) 30vw, 54vw",
+  "avif": [
+   {
+    "file": "snow-park-180.avif",
+    "w": 180,
+    "bytes": 13950
+   },
+   {
+    "file": "snow-park-252.avif",
+    "w": 252,
+    "bytes": 16981
+   },
+   {
+    "file": "snow-park-353.avif",
+    "w": 353,
+    "bytes": 22716
+   },
+   {
+    "file": "snow-park-576.avif",
+    "w": 576,
+    "bytes": 41738
+   }
+  ],
+  "webp": [
+   {
+    "file": "snow-park-180.webp",
+    "w": 180,
+    "bytes": 3820
+   },
+   {
+    "file": "snow-park-252.webp",
+    "w": 252,
+    "bytes": 7092
+   },
+   {
+    "file": "snow-park-353.webp",
+    "w": 353,
+    "bytes": 13364
+   },
+   {
+    "file": "snow-park-576.webp",
+    "w": 576,
+    "bytes": 35102
+   }
+  ],
+  "quality": {
+   "avif": 62,
+   "webp": 80
+  },
+  "fallback": {
+   "file": "snow-park-420.jpg",
+   "w": 420,
+   "bytes": 33867
+  },
+  "fallback_height": 624,
+  "psnr": 38.3
+ }
+}

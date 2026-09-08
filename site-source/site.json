@@ -1,0 +1,38 @@
+{
+  "brand": "Keir Dillon",
+  "kind": "personal",
+  "domain": "https://keirdillon.com",
+  "peer_brand": "Dillon Agency",
+  "peer_domain": "https://dillonagency.co",
+  "review_origin": "https://keir-dillon-brand-review.keirdillon.chatgpt.site",
+  "peer_review_origin": "https://dillon-agency-brand-review.keirdillon.chatgpt.site",
+  "standalone": "keir-dillon-website.html",
+  "descriptor": "Fractional CMO<br>Founder, Dillon Agency",
+  "email": "keir@dillonagency.co",
+  "nav": [
+    [
+      "about",
+      "My story"
+    ],
+    [
+      "approach",
+      "Work with me"
+    ],
+    [
+      "work",
+      "Selected work"
+    ],
+    [
+      "tools",
+      "Resources"
+    ],
+    [
+      "guides",
+      "Field notes"
+    ],
+    [
+      "contact",
+      "Contact"
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "brand": "Keir Dillon",
+  "pages": 14,
+  "html_files_checked": 29,
+  "peer_links_checked": 0,
+  "production_metadata_checked": true,
+  "checks": [
+    "Page/control IDs",
+    "Local links and assets",
+    "Single-file offline embedding",
+    "One H1 per published page",
+    "Source photo hashes",
+    "JavaScript syntax",
+    "Review indexing",
+    "Production canonicals, sitemap and entity graph when built",
+    "Three advisor tool functions for personal site"
+  ],
+  "not_tested": [
+    "Browser rendering",
+    "Mail client launch, clipboard and downloads in a browser",
+    "Live search indexing",
+    "Existing production-site integrations"
+  ]
+}
